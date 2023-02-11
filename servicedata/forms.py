@@ -66,7 +66,7 @@ class ReviewForm(forms.ModelForm):
         }
 
 
-class BgPricingForm(forms.ModelForm):
+class BgServiceForm(forms.ModelForm):
     class Meta:
         model = BgService
         fields = (
