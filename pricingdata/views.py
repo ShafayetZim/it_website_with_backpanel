@@ -9,6 +9,10 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 
 
+def dashboard(request):
+    return render(request, 'index.html')
+
+
 class BgPricingList(ListView):
     model = BgPricing
     template_name = 'pricing/pricing_bg_list.html'
@@ -38,7 +42,7 @@ class BgPricingUpdateView(SuccessMessageMixin, UpdateView):
 
 class PricingList(ListView):
     model = Pricing
-    template_name = 'pricing/blog_list.html'
+    template_name = 'pricing/pricing_list.html'
     context_object_name = 'pricing'
 
     def get_context_data(self, **kwargs):
@@ -50,7 +54,7 @@ class PricingList(ListView):
 
 
 def new_pricing(request):
-    template_name = 'about/blog_new.html'
+    template_name = 'pricing/pricing_new.html'
 
     if request.method == 'GET':
         print("GET called")
