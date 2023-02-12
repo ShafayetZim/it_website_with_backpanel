@@ -4,9 +4,9 @@ from django import forms
 
 class EmailForm(forms.ModelForm):
     class Meta:
-        model = Contact
+        model = Email
         fields = (
-            'mail')
+            'mail',)
 
         widgets = {
             'mail': forms.TextInput(attrs={'class': 'form-control'}),
@@ -15,9 +15,9 @@ class EmailForm(forms.ModelForm):
 
 class PhoneForm(forms.ModelForm):
     class Meta:
-        model = Contact
+        model = Phone
         fields = (
-            'number')
+            'number',)
 
         widgets = {
             'number': forms.TextInput(attrs={'class': 'form-control'}),
@@ -26,9 +26,9 @@ class PhoneForm(forms.ModelForm):
 
 class OfficeForm(forms.ModelForm):
     class Meta:
-        model = Contact
+        model = Office
         fields = (
-            'address')
+            'address',)
 
         widgets = {
             'address': forms.TextInput(attrs={'class': 'form-control'}),
