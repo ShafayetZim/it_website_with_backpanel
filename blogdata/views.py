@@ -50,7 +50,7 @@ class BlogList(ListView):
 
 
 def new_blog(request):
-    template_name = 'about/blog_new.html'
+    template_name = 'blog/blog_new.html'
 
     if request.method == 'GET':
         print("GET called")
@@ -115,7 +115,7 @@ class CommentList(ListView):
 
 
 def new_comment(request):
-    template_name = 'about/comment_new.html'
+    template_name = 'blog/comment_new.html'
 
     if request.method == 'GET':
         print("GET called")
