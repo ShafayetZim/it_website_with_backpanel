@@ -80,7 +80,7 @@ class ServiceList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Service List"
-        context["nav_bar"] = "service"
+        context["nav_bar"] = "home_service"
         context['service'] = self.model.objects.all().order_by('-id')
         return context
 
@@ -110,7 +110,7 @@ def new_service(request):
     return render(request, template_name, {
         'service_form': service_form,
         'title': 'New Service',
-        'nav_bar': 'service',
+        'nav_bar': 'home_service',
     })
 
 
@@ -124,7 +124,7 @@ class ServiceUpdateView(SuccessMessageMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Update Service Information"
-        context["nav_bar"] = "service"
+        context["nav_bar"] = "home_service"
         return context
 
 
@@ -210,7 +210,7 @@ class ExperienceList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Experience List"
-        context["nav_bar"] = "experience"
+        context["nav_bar"] = "home_experience"
         context['experience'] = self.model.objects.all().order_by('-id')
         return context
 
@@ -231,7 +231,7 @@ def new_experience(request):
             experience.save()
 
             messages.add_message(request, messages.SUCCESS, 'New Experience Entry Successful')
-            return redirect('experience-list')
+            return redirect('experience-home-list')
 
         else:
             print("Not Valid Create Form")
@@ -240,21 +240,21 @@ def new_experience(request):
     return render(request, template_name, {
         'experience_form': experience_form,
         'title': 'New Experience',
-        'nav_bar': 'experience',
+        'nav_bar': 'home_experience',
     })
 
 
 class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
     model = Experience
     form_class = ExperienceForm
-    success_url = reverse_lazy('experience-list')
+    success_url = reverse_lazy('experience-home-list')
     template_name = 'home/experience_update.html'
     success_message = "Experience was updated successfully"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Update Experience Information"
-        context["nav_bar"] = "experience"
+        context["nav_bar"] = "home_experience"
         return context
 
 
@@ -264,7 +264,7 @@ def experience_delete(request, id):
         Experience.objects.filter(id=instance.id).delete()
         instance.delete()
         messages.add_message(request, messages.WARNING, 'Delete Success')
-        return redirect('experience-list')
+        return redirect('experience-home-list')
 
 
 class AboutList(ListView):
@@ -280,6 +280,7 @@ class AboutList(ListView):
         return context
 
 
+# not necessary
 def new_about(request):
     template_name = 'home/about_new.html'
 
@@ -323,6 +324,7 @@ class AboutUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+# not necessary
 def about_delete(request, id):
     if request.method == 'GET':
         instance = About.objects.get(id=id)
