@@ -116,7 +116,6 @@ class FeatureList(ListView):
         return context
 
 
-# not necessary
 def new_feature(request):
     template_name = 'about/feature_new.html'
 
@@ -160,7 +159,6 @@ class FeatureUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-# not necessary
 def feature_delete(request, id):
     if request.method == 'GET':
         instance = Feature.objects.get(id=id)
@@ -183,7 +181,6 @@ class ProgressbarList(ListView):
         return context
 
 
-# not necessary
 def new_progressbar(request):
     template_name = 'about/progressbar_new.html'
 
@@ -227,7 +224,6 @@ class ProgressbarUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-# not necessary
 def progressbar_delete(request, id):
     if request.method == 'GET':
         instance = Progressbar.objects.get(id=id)
