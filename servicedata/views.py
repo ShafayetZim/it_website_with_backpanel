@@ -39,12 +39,12 @@ class BgServiceUpdateView(SuccessMessageMixin, UpdateView):
 class ExperienceList(ListView):
     model = Experience
     template_name = 'service/experience_list.html'
-    context_object_name = 'experience'
+    context_object_name = 'experience_service'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Experience List"
-        context["nav_bar"] = "experience"
+        context["nav_bar"] = "experience_service"
         context['experience'] = self.model.objects.all().order_by('-id')
         return context
 
@@ -59,7 +59,7 @@ class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Update Experience Information"
-        context["nav_bar"] = "experience"
+        context["nav_bar"] = "experience_service"
         return context
 
 
@@ -206,7 +206,7 @@ class TestimonialList(ListView):
         return context
 
 
-def new_slider(request):
+def new_testimonial(request):
     template_name = 'service/testimonial_new.html'
 
     if request.method == 'GET':
