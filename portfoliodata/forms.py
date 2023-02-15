@@ -10,8 +10,8 @@ class PortfolioForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'price': forms.TextInput(attrs={'class': 'form-control'}),
-            'image': forms.FileInput(attrs={'class': 'rounded_list'}),
+            'info': forms.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.FileInput(attrs={'class': 'rounded_list border'}),
         }
 
 
@@ -23,9 +23,10 @@ class PortfolioDetailsForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'code': forms.TextInput(attrs={'class': 'form-control'}),
-            'image1': forms.FileInput(attrs={'class': 'rounded_list'}),
-            'image2': forms.FileInput(attrs={'class': 'rounded_list'}),
+            'code': forms.Select(
+                attrs={'required': True, 'class': 'form-control', 'value': '', 'id': 'id_code'}),
+            'image1': forms.FileInput(attrs={'class': 'rounded_list border'}),
+            'image2': forms.FileInput(attrs={'class': 'rounded_list border'}),
             'date': forms.DateInput(attrs={'class': 'form-control'}),
             'category': forms.TextInput(attrs={'class': 'form-control'}),
             'client': forms.TextInput(attrs={'class': 'form-control'}),

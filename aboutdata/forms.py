@@ -33,7 +33,7 @@ class ProgressbarForm(forms.ModelForm):
             'name', 'percentage')
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
             'percentage': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
@@ -45,7 +45,7 @@ class PartnerForm(forms.ModelForm):
             'name', 'website', 'logo')
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
             'website': forms.TextInput(attrs={'class': 'form-control'}),
             'logo': forms.FileInput(attrs={'class': 'rounded_list'}),
         }
@@ -66,7 +66,7 @@ class TeamForm(forms.ModelForm):
 
 class ExperienceForm(forms.ModelForm):
     class Meta:
-        model = Feature
+        model = Experience
         fields = (
             'title', 'quantity', 'icon')
 

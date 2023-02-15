@@ -10,7 +10,7 @@ class ServiceForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'price': forms.TextInput(attrs={'class': 'form-control'}),
+            'info': forms.TextInput(attrs={'class': 'form-control'}),
             'icon': forms.FileInput(attrs={'class': 'rounded_list'}),
             'desc': forms.TextInput(attrs={'class': 'form-control'}),
         }
@@ -36,7 +36,7 @@ class ProgressForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'percentage': forms.TextInput(attrs={'class': 'form_control'}),
+            'percentage': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 
@@ -48,13 +48,13 @@ class TestimonialForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'desc': forms.TextInput(attrs={'class': 'form_control'}),
+            'desc': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 
 class ReviewForm(forms.ModelForm):
     class Meta:
-        model = Service
+        model = Review
         fields = (
             'name', 'position', 'image', 'review')
 
