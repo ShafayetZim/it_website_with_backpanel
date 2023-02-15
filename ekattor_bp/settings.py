@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'pricingdata',
     'contactdata',
     'portfoliodata',
+    'webapp',
+    'crispy_forms',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
