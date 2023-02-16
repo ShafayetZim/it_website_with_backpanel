@@ -52,7 +52,11 @@
 
                                         <div class="row">
                                             <div class="col text-start">
+                                                {{ form.discount|as_crispy_field }}
+                                            </div>
+                                            <div class="col text-start">
                                                 {{ form.icon|as_crispy_field }}
+                                                <p>Currently: {{ form.icon.value}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
