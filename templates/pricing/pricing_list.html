@@ -41,7 +41,8 @@
                                         <th class="checkbox-column text-center"> Id </th>
                                         <th>Title</th>
                                         <th>Price</th>
-                                        <th>Icon</th>
+                                        <th>Discount</th>
+                                        <th>Image</th>
                                         <th>Support</th>
                                         <th class="text-center dt-no-sorting">Action</th>
                                     </tr>
@@ -52,8 +53,9 @@
                                         <td class="checkbox-column text-center">{{ forloop.counter }}</td>
                                         <td>{{ item.title}}</td>
                                         <td>{{ item.price}}</td>
+                                        <td>{{ item.discount}}</td>
                                         <td><img src="{{ item.icon.url }}" alt=""  height="80" /></td>
-                                        <td>{{ item.support|safe}}</td>
+                                        <td>{{ item.support|safe|truncatechars:20}}</td>
                                         <td class="text-center">
                                             <ul class="table-controls">
                                                 <li><a href="{% url 'pricing-update' item.pk %}" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" data-original-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-8 mb-1"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg></a></li>
