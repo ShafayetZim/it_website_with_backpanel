@@ -1,0 +1,186 @@
+/* Extra classes
+-------------------------------------------------------------- */
+.wrap-fx {
+  display: flex;
+}
+
+.m-t51 {
+  margin-top: 51px;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.pb25 {
+  padding: 0 25%;
+}
+
+.txt-r {
+  text-align: right;
+}
+
+.pb40 {
+  padding-bottom: 40px;
+}
+
+.pb52 {
+  padding-bottom: 52px;
+}
+
+.pr70 {
+  padding-right: 70px;
+}
+
+.pr110 {
+  padding-right: 110px;
+}
+
+.pr80 {
+  padding-right: 80px;
+}
+
+.bg-st1 {
+  background: #F6F6F6;
+}
+
+.txt-transform {
+  text-transform: capitalize;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.mr-12 {
+  margin-right: -12px;
+}
+
+.ml100 {
+  margin-left: 100px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.title-section.mb68 {
+  margin-bottom: 68px;
+}
+.title-section.mb69 {
+  margin-bottom: 69px;
+}
+.title-section.mb29 {
+  margin-bottom: 29px;
+}
+.title-section.mb39 {
+  margin-bottom: 39px;
+}
+.title-section.mb49 {
+  margin-bottom: 49px;
+}
+.title-section.mb0 {
+  margin-bottom: 0;
+}
+.title-section.mb19 {
+  margin-bottom: 19px;
+}
+
+.mb52 {
+  margin-bottom: 52px;
+}
+
+.pr65 {
+  padding-right: 65px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.pr20 {
+  padding-right: 20%;
+}
+
+.pr60 {
+  padding-right: 60px;
+}
+
+.ml104 {
+  margin-left: 104px;
+}
+
+.pr75 {
+  padding-right: 75px;
+}
+
+.pr10 {
+  padding-right: 10%;
+}
+
+.pr100 {
+  padding-right: 100px;
+}
+
+.pr15 {
+  padding-right: 15%;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.mb36 {
+  margin-bottom: 36px;
+}
+
+.pt13 {
+  padding-top: 13px;
+}
+
+.mr-15 {
+  margin-right: -15px;
+}
+
+.mt131 {
+  margin-top: 131px;
+}
+
+.mt129 {
+  margin-top: 129px;
+}
+
+.mb26 {
+  margin-bottom: 26px;
+}
+
+.mt23 {
+  margin-top: 23px;
+}
+
+.pd30 {
+  padding: 0 30%;
+}
+
+.wrap-testimonior-style {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.ml-20 {
+  margin-left: -20px;
+}
+
+/*# sourceMappingURL=extrasclass.css.map */
