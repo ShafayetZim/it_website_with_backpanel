@@ -47,7 +47,7 @@ class PortfolioList(ListView):
         return context
 
 
-def new_service(request):
+def new_portfolio(request):
     template_name = 'portfolio/portfolio_new.html'
 
     if request.method == 'GET':
@@ -155,12 +155,34 @@ class PortfolioDetailUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-def service_delete(request, id):
+def details_delete(request, id):
     if request.method == 'GET':
         instance = PortfolioDetails.objects.get(id=id)
         PortfolioDetails.objects.filter(id=instance.id).delete()
         instance.delete()
         messages.add_message(request, messages.WARNING, 'Delete Success')
         return redirect('portfolio-detail-list')
+
+
+def create_portfolio(request):
+    if request.method == 'POST':
+        portfolio_form = PortfolioForm(request.POST, request.FILES)
+        portfolio_details_form = PortfolioDetailsForm(request.POST)
+
+        if portfolio_form.is_valid() and portfolio_details_form.is_valid():
+            portfolio = portfolio_form.save()
+            portfolio_details = portfolio_details_form.save(commit=False)
+            portfolio_details.code = portfolio
+            portfolio_details.save()
+
+            # success message and redirect
+            return redirect('dashboard')
+
+    else:
+        portfolio_form = PortfolioForm()
+        portfolio_details_form = PortfolioDetailsForm()
+
+    return render(request, 'portfolio/portfolio_new.html', {'portfolio_form': portfolio_form, 'portfolio_details_form': portfolio_details_form})
+
 
 
