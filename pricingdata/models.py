@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
 class Pricing(models.Model):
     title = models.CharField(max_length=200)
     price = models.FloatField(max_length=10)
+    discount = models.FloatField(max_length=10, blank=True, null=True)
     icon = models.ImageField(upload_to='pricing')
     support = RichTextField()
 
