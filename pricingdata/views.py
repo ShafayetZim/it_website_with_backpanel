@@ -7,12 +7,18 @@ from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 def dashboard(request):
-    return render(request, 'index.html')
+    context = {
+        'nav_bar': "dashboard"
+    }
+    return render(request, 'index.html', context)
 
 
+@login_required()
 class BgPricingList(ListView):
     model = BgPricing
     template_name = 'pricing/pricing_bg_list.html'
@@ -26,6 +32,7 @@ class BgPricingList(ListView):
         return context
 
 
+@login_required()
 class BgPricingUpdateView(SuccessMessageMixin, UpdateView):
     model = BgPricing
     form_class = BgPricingCreateForm
@@ -40,6 +47,7 @@ class BgPricingUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class PricingList(ListView):
     model = Pricing
     template_name = 'pricing/pricing_list.html'
@@ -53,6 +61,7 @@ class PricingList(ListView):
         return context
 
 
+@login_required()
 def new_pricing(request):
     template_name = 'pricing/pricing_new.html'
 
@@ -82,6 +91,7 @@ def new_pricing(request):
     })
 
 
+@login_required()
 class PricingUpdateView(SuccessMessageMixin, UpdateView):
     model = Pricing
     form_class = PricingCreateForm
@@ -96,6 +106,7 @@ class PricingUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def pricing_delete(request, id):
     if request.method == 'GET':
         instance = Pricing.objects.get(id=id)
