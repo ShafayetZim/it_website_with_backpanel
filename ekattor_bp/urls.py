@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include('servicedata.urls')),
     path('', include('portfoliodata.urls')),
     path('', include('webapp.urls')),
+    path('', include('authentication.urls')),
 ]
