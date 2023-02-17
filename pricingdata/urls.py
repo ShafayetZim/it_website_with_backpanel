@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.dashboard, name="dashboard"),
+    path('dashboard', views.dashboard, name="dashboard"),
     path('bg_pricing', views.BgPricingList.as_view(), name="pricing-bg-list"),
     path('update_pricing_bg/<int:pk>', views.BgPricingUpdateView.as_view(), name='pricing-bg-update'),
     path('pricing', views.PricingList.as_view(), name="pricing-list"),
