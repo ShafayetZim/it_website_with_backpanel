@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.contrib import messages
-from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 class BgPortfolioList(ListView):
     model = BgPortfolio
     template_name = 'portfolio/portfolio_bg_list.html'
@@ -20,6 +21,7 @@ class BgPortfolioList(ListView):
         return context
 
 
+@login_required()
 class BgPortfolioUpdateView(SuccessMessageMixin, UpdateView):
     model = BgPortfolio
     form_class = BgPortfolioForm
@@ -34,6 +36,7 @@ class BgPortfolioUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class PortfolioList(ListView):
     model = Portfolio
     template_name = 'portfolio/portfolio_list.html'
@@ -47,6 +50,7 @@ class PortfolioList(ListView):
         return context
 
 
+@login_required()
 def new_portfolio(request):
     template_name = 'portfolio/portfolio_new.html'
 
@@ -76,6 +80,7 @@ def new_portfolio(request):
     })
 
 
+@login_required()
 class PortfolioUpdateView(SuccessMessageMixin, UpdateView):
     model = Portfolio
     form_class = PortfolioForm
@@ -90,6 +95,7 @@ class PortfolioUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def portfolio_delete(request, id):
     if request.method == 'GET':
         instance = Portfolio.objects.get(id=id)
@@ -99,6 +105,7 @@ def portfolio_delete(request, id):
         return redirect('portfolio-list')
 
 
+@login_required()
 class PortfolioDetailList(ListView):
     model = PortfolioDetails
     template_name = 'portfolio/portfolio_detail_list.html'
@@ -112,6 +119,7 @@ class PortfolioDetailList(ListView):
         return context
 
 
+@login_required()
 def new_portfolio_detail(request):
     template_name = 'portfolio/portfolio_detail_new.html'
 
@@ -141,6 +149,7 @@ def new_portfolio_detail(request):
     })
 
 
+@login_required()
 class PortfolioDetailUpdateView(SuccessMessageMixin, UpdateView):
     model = PortfolioDetails
     form_class = PortfolioDetailsForm
@@ -155,6 +164,7 @@ class PortfolioDetailUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def details_delete(request, id):
     if request.method == 'GET':
         instance = PortfolioDetails.objects.get(id=id)
@@ -164,6 +174,7 @@ def details_delete(request, id):
         return redirect('portfolio-detail-list')
 
 
+@login_required()
 def create_portfolio(request):
     if request.method == 'POST':
         portfolio_form = PortfolioForm(request.POST, request.FILES)

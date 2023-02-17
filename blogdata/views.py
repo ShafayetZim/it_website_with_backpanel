@@ -7,8 +7,10 @@ from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 class BgBlogList(ListView):
     model = BgBlog
     template_name = 'blog/blog_bg_list.html'
@@ -22,6 +24,7 @@ class BgBlogList(ListView):
         return context
 
 
+@login_required()
 class BgBlogUpdateView(SuccessMessageMixin, UpdateView):
     model = BgBlog
     form_class = BgBlogForm
@@ -36,6 +39,7 @@ class BgBlogUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class BlogList(ListView):
     model = Blog
     template_name = 'blog/blog_list.html'
@@ -49,6 +53,7 @@ class BlogList(ListView):
         return context
 
 
+@login_required()
 def new_blog(request):
     template_name = 'blog/blog_new.html'
 
@@ -78,6 +83,7 @@ def new_blog(request):
     })
 
 
+@login_required()
 class BlogUpdateView(SuccessMessageMixin, UpdateView):
     model = Blog
     form_class = BlogForm
@@ -92,6 +98,7 @@ class BlogUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def blog_delete(request, id):
     if request.method == 'GET':
         instance = Blog.objects.get(id=id)
@@ -101,6 +108,7 @@ def blog_delete(request, id):
         return redirect('blog-list')
 
 
+@login_required()
 class CommentList(ListView):
     model = Comment
     template_name = 'blog/comment_list.html'
@@ -114,6 +122,7 @@ class CommentList(ListView):
         return context
 
 
+@login_required()
 def new_comment(request):
     template_name = 'blog/comment_new.html'
 
@@ -143,6 +152,7 @@ def new_comment(request):
     })
 
 
+@login_required()
 class CommentUpdateView(SuccessMessageMixin, UpdateView):
     model = Comment
     form_class = CommentForm
@@ -157,6 +167,7 @@ class CommentUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def comment_delete(request, id):
     if request.method == 'GET':
         instance = Comment.objects.get(id=id)

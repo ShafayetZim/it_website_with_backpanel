@@ -1,14 +1,13 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.urls import reverse
-from django.views import View
 from django.contrib import messages
-from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 class BgServiceList(ListView):
     model = BgService
     template_name = 'service/service_bg_list.html'
@@ -22,6 +21,7 @@ class BgServiceList(ListView):
         return context
 
 
+@login_required()
 class BgServiceUpdateView(SuccessMessageMixin, UpdateView):
     model = BgService
     form_class = BgServiceForm
@@ -36,6 +36,7 @@ class BgServiceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class ExperienceList(ListView):
     model = Experience
     template_name = 'service/experience_list.html'
@@ -49,6 +50,7 @@ class ExperienceList(ListView):
         return context
 
 
+@login_required()
 class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
     model = Experience
     form_class = Experience
@@ -63,6 +65,7 @@ class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class ServiceList(ListView):
     model = Service
     template_name = 'service/service_list.html'
@@ -76,6 +79,7 @@ class ServiceList(ListView):
         return context
 
 
+@login_required()
 def new_service(request):
     template_name = 'service/service_new.html'
 
@@ -105,6 +109,7 @@ def new_service(request):
     })
 
 
+@login_required()
 class ServiceUpdateView(SuccessMessageMixin, UpdateView):
     model = Service
     form_class = ServiceForm
@@ -119,6 +124,7 @@ class ServiceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def service_delete(request, id):
     if request.method == 'GET':
         instance = Service.objects.get(id=id)
@@ -128,6 +134,7 @@ def service_delete(request, id):
         return redirect('service-list')
 
 
+@login_required()
 class ProgressList(ListView):
     model = Progress
     template_name = 'service/progress_list.html'
@@ -141,6 +148,7 @@ class ProgressList(ListView):
         return context
 
 
+@login_required()
 def new_progress(request):
     template_name = 'service/progress_new.html'
 
@@ -170,6 +178,7 @@ def new_progress(request):
     })
 
 
+@login_required()
 class ProgressUpdateView(SuccessMessageMixin, UpdateView):
     model = Progress
     form_class = ProgressForm
@@ -184,6 +193,7 @@ class ProgressUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def progress_delete(request, id):
     if request.method == 'GET':
         instance = Progress.objects.get(id=id)
@@ -193,6 +203,7 @@ def progress_delete(request, id):
         return redirect('progress-list')
 
 
+@login_required()
 class TestimonialList(ListView):
     model = Testimonial
     template_name = 'service/testimonial_list.html'
@@ -206,6 +217,7 @@ class TestimonialList(ListView):
         return context
 
 
+@login_required()
 def new_testimonial(request):
     template_name = 'service/testimonial_new.html'
 
@@ -235,6 +247,7 @@ def new_testimonial(request):
     })
 
 
+@login_required()
 class TestimonialUpdateView(SuccessMessageMixin, UpdateView):
     model = Testimonial
     form_class = TestimonialForm
@@ -249,6 +262,7 @@ class TestimonialUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def testimonial_delete(request, id):
     if request.method == 'GET':
         instance = Testimonial.objects.get(id=id)
@@ -258,6 +272,7 @@ def testimonial_delete(request, id):
         return redirect('testimonial-list')
 
 
+@login_required()
 class ReviewList(ListView):
     model = Review
     template_name = 'service/review_list.html'
@@ -271,6 +286,7 @@ class ReviewList(ListView):
         return context
 
 
+@login_required()
 def new_review(request):
     template_name = 'service/review_new.html'
 
@@ -300,6 +316,7 @@ def new_review(request):
     })
 
 
+@login_required()
 class ReviewUpdateView(SuccessMessageMixin, UpdateView):
     model = Review
     form_class = ReviewForm
@@ -314,6 +331,7 @@ class ReviewUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def review_delete(request, id):
     if request.method == 'GET':
         instance = Review.objects.get(id=id)

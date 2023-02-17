@@ -1,14 +1,13 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.urls import reverse
-from django.views import View
 from django.contrib import messages
-from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 class BgContactList(ListView):
     model = ContactBg
     template_name = 'contact/contact_bg_list.html'
@@ -22,6 +21,7 @@ class BgContactList(ListView):
         return context
 
 
+@login_required()
 class BgContactUpdateView(SuccessMessageMixin, UpdateView):
     model = ContactBg
     form_class = ContactBgForm
@@ -36,6 +36,7 @@ class BgContactUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class ContactList(ListView):
     model = Contact
     template_name = 'contact/contact_list.html'
@@ -79,6 +80,7 @@ def new_contact(request):
     })
 
 
+@login_required()
 class ContactUpdateView(SuccessMessageMixin, UpdateView):
     model = Contact
     form_class = ContactForm
@@ -103,6 +105,7 @@ def contact_delete(request, id):
         return redirect('contact-list')
 
 
+@login_required()
 class PhoneList(ListView):
     model = Phone
     template_name = 'contact/phone_list.html'
@@ -116,6 +119,7 @@ class PhoneList(ListView):
         return context
 
 
+@login_required()
 def new_phone(request):
     template_name = 'contact/phone_new.html'
 
@@ -145,6 +149,7 @@ def new_phone(request):
     })
 
 
+@login_required()
 class PhoneUpdateView(SuccessMessageMixin, UpdateView):
     model = Phone
     form_class = PhoneForm
@@ -159,6 +164,7 @@ class PhoneUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def phone_delete(request, id):
     if request.method == 'GET':
         instance = Phone.objects.get(id=id)
@@ -168,6 +174,7 @@ def phone_delete(request, id):
         return redirect('phone-list')
 
 
+@login_required()
 class EmailList(ListView):
     model = Email
     template_name = 'contact/email_list.html'
@@ -181,6 +188,7 @@ class EmailList(ListView):
         return context
 
 
+@login_required()
 def new_email(request):
     template_name = 'contact/email_new.html'
 
@@ -210,6 +218,7 @@ def new_email(request):
     })
 
 
+@login_required()
 class EmailUpdateView(SuccessMessageMixin, UpdateView):
     model = Email
     form_class = EmailForm
@@ -224,6 +233,7 @@ class EmailUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def email_delete(request, id):
     if request.method == 'GET':
         instance = Email.objects.get(id=id)
@@ -233,6 +243,7 @@ def email_delete(request, id):
         return redirect('email-list')
 
 
+@login_required()
 class OfficeList(ListView):
     model = Office
     template_name = 'contact/office_list.html'
@@ -246,6 +257,7 @@ class OfficeList(ListView):
         return context
 
 
+@login_required()
 def new_office(request):
     template_name = 'contact/office_new.html'
 
@@ -275,6 +287,7 @@ def new_office(request):
     })
 
 
+@login_required()
 class OfficeUpdateView(SuccessMessageMixin, UpdateView):
     model = Office
     form_class = OfficeForm
@@ -289,6 +302,7 @@ class OfficeUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def office_delete(request, id):
     if request.method == 'GET':
         instance = Office.objects.get(id=id)

@@ -5,8 +5,10 @@ from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 class SliderList(ListView):
     model = Slider
     template_name = 'home/slider_list.html'
@@ -20,6 +22,7 @@ class SliderList(ListView):
         return context
 
 
+@login_required()
 def new_slider(request):
     template_name = 'home/slider_new.html'
 
@@ -49,6 +52,7 @@ def new_slider(request):
     })
 
 
+@login_required()
 class SliderUpdateView(SuccessMessageMixin, UpdateView):
     model = Slider
     form_class = SliderForm
@@ -63,6 +67,7 @@ class SliderUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def slider_delete(request, id):
     if request.method == 'GET':
         instance = Slider.objects.get(id=id)
@@ -72,6 +77,7 @@ def slider_delete(request, id):
         return redirect('slider-list')
 
 
+@login_required()
 class ServiceList(ListView):
     model = Service
     template_name = 'home/service_list.html'
@@ -85,6 +91,7 @@ class ServiceList(ListView):
         return context
 
 
+@login_required()
 def new_service(request):
     template_name = 'home/service_new.html'
 
@@ -114,6 +121,7 @@ def new_service(request):
     })
 
 
+@login_required()
 class ServiceUpdateView(SuccessMessageMixin, UpdateView):
     model = Service
     form_class = ServiceForm
@@ -128,6 +136,7 @@ class ServiceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def service_delete(request, id):
     if request.method == 'GET':
         instance = Service.objects.get(id=id)
@@ -137,6 +146,7 @@ def service_delete(request, id):
         return redirect('service-list')
 
 
+@login_required()
 class ProjectList(ListView):
     model = Project
     template_name = 'home/project_list.html'
@@ -150,6 +160,7 @@ class ProjectList(ListView):
         return context
 
 
+@login_required()
 def new_project(request):
     template_name = 'home/project_new.html'
 
@@ -179,6 +190,7 @@ def new_project(request):
     })
 
 
+@login_required()
 class ProjectUpdateView(SuccessMessageMixin, UpdateView):
     model = Project
     form_class = ProjectForm
@@ -193,6 +205,7 @@ class ProjectUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def project_delete(request, id):
     if request.method == 'GET':
         instance = Project.objects.get(id=id)
@@ -202,6 +215,7 @@ def project_delete(request, id):
         return redirect('project-list')
 
 
+@login_required()
 class ExperienceList(ListView):
     model = Experience
     template_name = 'home/experience_list.html'
@@ -215,6 +229,7 @@ class ExperienceList(ListView):
         return context
 
 
+@login_required()
 def new_experience(request):
     template_name = 'home/experience_new.html'
 
@@ -244,6 +259,7 @@ def new_experience(request):
     })
 
 
+@login_required()
 class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
     model = Experience
     form_class = ExperienceForm
@@ -258,6 +274,7 @@ class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def experience_delete(request, id):
     if request.method == 'GET':
         instance = Experience.objects.get(id=id)
@@ -267,6 +284,7 @@ def experience_delete(request, id):
         return redirect('experience-home-list')
 
 
+@login_required()
 class AboutList(ListView):
     model = About
     template_name = 'home/about_list.html'
@@ -310,6 +328,7 @@ def new_about(request):
     })
 
 
+@login_required()
 class AboutUpdateView(SuccessMessageMixin, UpdateView):
     model = About
     form_class = AboutForm
@@ -334,6 +353,7 @@ def about_delete(request, id):
         return redirect('about-list')
 
 
+@login_required()
 class SpecialityList(ListView):
     model = Speciality
     template_name = 'home/speciality_list.html'
@@ -347,6 +367,7 @@ class SpecialityList(ListView):
         return context
 
 
+@login_required()
 def new_speciality(request):
     template_name = 'home/speciality_new.html'
 
@@ -376,6 +397,7 @@ def new_speciality(request):
     })
 
 
+@login_required()
 class SpecialityUpdateView(SuccessMessageMixin, UpdateView):
     model = Speciality
     form_class = SpecialityForm
@@ -390,6 +412,7 @@ class SpecialityUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def speciality_delete(request, id):
     if request.method == 'GET':
         instance = Speciality.objects.get(id=id)

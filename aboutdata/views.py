@@ -7,8 +7,10 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 class BgAboutList(ListView):
     model = BgAbout
     template_name = 'about/about_bg_list.html'
@@ -52,6 +54,7 @@ def new_bg_about(request):
     })
 
 
+@login_required()
 class BgAboutUpdateView(SuccessMessageMixin, UpdateView):
     model = BgAbout
     form_class = BgAboutForm
@@ -76,6 +79,7 @@ def bg_about_delete(request, id):
         return redirect('about-bg-list')
 
 
+@login_required()
 class CompanyList(ListView):
     model = Company
     template_name = 'about/company_list.html'
@@ -89,6 +93,7 @@ class CompanyList(ListView):
         return context
 
 
+@login_required()
 class CompanyUpdateView(SuccessMessageMixin, UpdateView):
     model = Company
     form_class = CompanyForm
@@ -103,6 +108,7 @@ class CompanyUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class FeatureList(ListView):
     model = Feature
     template_name = 'about/feature_list.html'
@@ -116,6 +122,7 @@ class FeatureList(ListView):
         return context
 
 
+@login_required()
 def new_feature(request):
     template_name = 'about/feature_new.html'
 
@@ -145,6 +152,7 @@ def new_feature(request):
     })
 
 
+@login_required()
 class FeatureUpdateView(SuccessMessageMixin, UpdateView):
     model = Feature
     form_class = FeatureForm
@@ -159,6 +167,7 @@ class FeatureUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def feature_delete(request, id):
     if request.method == 'GET':
         instance = Feature.objects.get(id=id)
@@ -168,6 +177,7 @@ def feature_delete(request, id):
         return redirect('feature-list')
 
 
+@login_required()
 class ProgressbarList(ListView):
     model = Progressbar
     template_name = 'about/progressbar_list.html'
@@ -181,6 +191,7 @@ class ProgressbarList(ListView):
         return context
 
 
+@login_required()
 def new_progressbar(request):
     template_name = 'about/progressbar_new.html'
 
@@ -210,6 +221,7 @@ def new_progressbar(request):
     })
 
 
+@login_required()
 class ProgressbarUpdateView(SuccessMessageMixin, UpdateView):
     model = Progressbar
     form_class = ProgressbarForm
@@ -224,6 +236,7 @@ class ProgressbarUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def progressbar_delete(request, id):
     if request.method == 'GET':
         instance = Progressbar.objects.get(id=id)
@@ -233,6 +246,7 @@ def progressbar_delete(request, id):
         return redirect('progressbar-list')
 
 
+@login_required()
 class BgExperienceList(ListView):
     model = ExperienceBg
     template_name = 'about/experience_bg_list.html'
@@ -246,6 +260,7 @@ class BgExperienceList(ListView):
         return context
 
 
+@login_required()
 class BgExperienceUpdateView(SuccessMessageMixin, UpdateView):
     model = ExperienceBg
     form_class = ExperienceBg
@@ -260,6 +275,7 @@ class BgExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class ExperienceList(ListView):
     model = Experience
     template_name = 'about/experience_list.html'
@@ -273,6 +289,7 @@ class ExperienceList(ListView):
         return context
 
 
+@login_required()
 class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
     model = ExperienceBg
     form_class = ExperienceBg
@@ -287,6 +304,7 @@ class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 class ProcessList(ListView):
     model = Process
     template_name = 'about/process_list.html'
@@ -300,6 +318,7 @@ class ProcessList(ListView):
         return context
 
 
+@login_required()
 def new_process(request):
     template_name = 'about/process_new.html'
 
@@ -329,6 +348,7 @@ def new_process(request):
     })
 
 
+@login_required()
 class ProcessUpdateView(SuccessMessageMixin, UpdateView):
     model = Process
     form_class = ProcessForm
@@ -343,6 +363,7 @@ class ProcessUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def process_delete(request, id):
     if request.method == 'GET':
         instance = Process.objects.get(id=id)
@@ -352,6 +373,7 @@ def process_delete(request, id):
         return redirect('process-list')
 
 
+@login_required()
 class TeamList(ListView):
     model = Team
     template_name = 'about/team_list.html'
@@ -365,6 +387,7 @@ class TeamList(ListView):
         return context
 
 
+@login_required()
 def new_team(request):
     template_name = 'about/team_new.html'
 
@@ -394,6 +417,7 @@ def new_team(request):
     })
 
 
+@login_required()
 class TeamUpdateView(SuccessMessageMixin, UpdateView):
     model = Team
     form_class = TeamForm
@@ -408,6 +432,7 @@ class TeamUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def team_delete(request, id):
     if request.method == 'GET':
         instance = Team.objects.get(id=id)
@@ -417,6 +442,7 @@ def team_delete(request, id):
         return redirect('team-list')
 
 
+@login_required()
 class PartnerList(ListView):
     model = Partner
     template_name = 'about/partner_list.html'
@@ -430,6 +456,7 @@ class PartnerList(ListView):
         return context
 
 
+@login_required()
 def new_partner(request):
     template_name = 'about/partner_new.html'
 
@@ -459,6 +486,7 @@ def new_partner(request):
     })
 
 
+@login_required()
 class PartnerUpdateView(SuccessMessageMixin, UpdateView):
     model = Partner
     form_class = PartnerForm
@@ -473,6 +501,7 @@ class PartnerUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
+@login_required()
 def partner_delete(request, id):
     if request.method == 'GET':
         instance = Progressbar.objects.get(id=id)
