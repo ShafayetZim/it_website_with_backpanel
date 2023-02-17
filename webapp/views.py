@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from pricingdata.models import *
+from contactdata.models import *
 
 
 def home(request):
@@ -18,17 +20,23 @@ def about(request):
 
 
 def pricing(request):
-    # users = User.objects.all()
+    pricing = Pricing.objects.all()
     context = {
-        # 'users': users
+        'pricing': pricing
     }
     return render(request, "webpages/pricing.html", context)
 
 
 def contact(request):
-    # users = User.objects.all()
+    phone = Phone.objects.all()
+    email = Email.objects.all()
+    office = Office.objects.all()
+    contact = Contact.objects.all()
     context = {
-        # 'users': users
+        'phone': phone,
+        'email': email,
+        'office': office,
+        'contact': contact
     }
     return render(request, "webpages/contact.html", context)
 
