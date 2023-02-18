@@ -1,17 +1,15 @@
 from django.shortcuts import render, redirect
-from django.views import View
 from .forms import *
 from .models import *
-from django.urls import reverse
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-@login_required()
-class BgAboutList(ListView):
+class BgAboutList(LoginRequiredMixin, ListView):
     model = BgAbout
     template_name = 'about/about_bg_list.html'
     context_object_name = 'about'
@@ -54,8 +52,7 @@ def new_bg_about(request):
     })
 
 
-@login_required()
-class BgAboutUpdateView(SuccessMessageMixin, UpdateView):
+class BgAboutUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = BgAbout
     form_class = BgAboutForm
     success_url = reverse_lazy('about-bg-list')
@@ -79,8 +76,7 @@ def bg_about_delete(request, id):
         return redirect('about-bg-list')
 
 
-@login_required()
-class CompanyList(ListView):
+class CompanyList(LoginRequiredMixin, ListView):
     model = Company
     template_name = 'about/company_list.html'
     context_object_name = 'company'
@@ -93,8 +89,7 @@ class CompanyList(ListView):
         return context
 
 
-@login_required()
-class CompanyUpdateView(SuccessMessageMixin, UpdateView):
+class CompanyUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Company
     form_class = CompanyForm
     success_url = reverse_lazy('company-list')
@@ -108,8 +103,7 @@ class CompanyUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class FeatureList(ListView):
+class FeatureList(LoginRequiredMixin, ListView):
     model = Feature
     template_name = 'about/feature_list.html'
     context_object_name = 'feature'
@@ -152,8 +146,7 @@ def new_feature(request):
     })
 
 
-@login_required()
-class FeatureUpdateView(SuccessMessageMixin, UpdateView):
+class FeatureUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Feature
     form_class = FeatureForm
     success_url = reverse_lazy('feature-list')
@@ -177,8 +170,7 @@ def feature_delete(request, id):
         return redirect('feature-list')
 
 
-@login_required()
-class ProgressbarList(ListView):
+class ProgressbarList(LoginRequiredMixin, ListView):
     model = Progressbar
     template_name = 'about/progressbar_list.html'
     context_object_name = 'progressbar'
@@ -221,8 +213,7 @@ def new_progressbar(request):
     })
 
 
-@login_required()
-class ProgressbarUpdateView(SuccessMessageMixin, UpdateView):
+class ProgressbarUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Progressbar
     form_class = ProgressbarForm
     success_url = reverse_lazy('progressbar-list')
@@ -246,8 +237,7 @@ def progressbar_delete(request, id):
         return redirect('progressbar-list')
 
 
-@login_required()
-class BgExperienceList(ListView):
+class BgExperienceList(LoginRequiredMixin, ListView):
     model = ExperienceBg
     template_name = 'about/experience_bg_list.html'
     context_object_name = 'experience'
@@ -260,8 +250,7 @@ class BgExperienceList(ListView):
         return context
 
 
-@login_required()
-class BgExperienceUpdateView(SuccessMessageMixin, UpdateView):
+class BgExperienceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = ExperienceBg
     form_class = ExperienceBg
     success_url = reverse_lazy('experience-bg-list')
@@ -275,7 +264,6 @@ class BgExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
 class ExperienceList(ListView):
     model = Experience
     template_name = 'about/experience_list.html'
@@ -289,8 +277,7 @@ class ExperienceList(ListView):
         return context
 
 
-@login_required()
-class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
+class ExperienceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = ExperienceBg
     form_class = ExperienceBg
     success_url = reverse_lazy('experience-list')
@@ -304,7 +291,6 @@ class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
 class ProcessList(ListView):
     model = Process
     template_name = 'about/process_list.html'
@@ -348,8 +334,7 @@ def new_process(request):
     })
 
 
-@login_required()
-class ProcessUpdateView(SuccessMessageMixin, UpdateView):
+class ProcessUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Process
     form_class = ProcessForm
     success_url = reverse_lazy('process-list')
@@ -373,8 +358,7 @@ def process_delete(request, id):
         return redirect('process-list')
 
 
-@login_required()
-class TeamList(ListView):
+class TeamList(LoginRequiredMixin, ListView):
     model = Team
     template_name = 'about/team_list.html'
     context_object_name = 'team'
@@ -417,8 +401,7 @@ def new_team(request):
     })
 
 
-@login_required()
-class TeamUpdateView(SuccessMessageMixin, UpdateView):
+class TeamUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Team
     form_class = TeamForm
     success_url = reverse_lazy('team-list')
@@ -442,8 +425,7 @@ def team_delete(request, id):
         return redirect('team-list')
 
 
-@login_required()
-class PartnerList(ListView):
+class PartnerList(LoginRequiredMixin, ListView):
     model = Partner
     template_name = 'about/partner_list.html'
     context_object_name = 'partner'
@@ -486,8 +468,7 @@ def new_partner(request):
     })
 
 
-@login_required()
-class PartnerUpdateView(SuccessMessageMixin, UpdateView):
+class PartnerUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Partner
     form_class = PartnerForm
     success_url = reverse_lazy('partner-list')

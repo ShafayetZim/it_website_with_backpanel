@@ -1,17 +1,14 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.urls import reverse
-from django.views import View
 from django.contrib import messages
-from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-@login_required()
-class BgBlogList(ListView):
+class BgBlogList(LoginRequiredMixin, ListView):
     model = BgBlog
     template_name = 'blog/blog_bg_list.html'
     context_object_name = 'blog'
@@ -24,7 +21,6 @@ class BgBlogList(ListView):
         return context
 
 
-@login_required()
 class BgBlogUpdateView(SuccessMessageMixin, UpdateView):
     model = BgBlog
     form_class = BgBlogForm
@@ -39,8 +35,7 @@ class BgBlogUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class BlogList(ListView):
+class BlogList(LoginRequiredMixin, ListView):
     model = Blog
     template_name = 'blog/blog_list.html'
     context_object_name = 'blog'
@@ -83,7 +78,6 @@ def new_blog(request):
     })
 
 
-@login_required()
 class BlogUpdateView(SuccessMessageMixin, UpdateView):
     model = Blog
     form_class = BlogForm
@@ -108,8 +102,7 @@ def blog_delete(request, id):
         return redirect('blog-list')
 
 
-@login_required()
-class CommentList(ListView):
+class CommentList(LoginRequiredMixin, ListView):
     model = Comment
     template_name = 'blog/comment_list.html'
     context_object_name = 'comment'
@@ -152,7 +145,6 @@ def new_comment(request):
     })
 
 
-@login_required()
 class CommentUpdateView(SuccessMessageMixin, UpdateView):
     model = Comment
     form_class = CommentForm

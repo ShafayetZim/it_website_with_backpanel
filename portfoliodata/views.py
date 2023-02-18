@@ -5,10 +5,10 @@ from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-@login_required()
-class BgPortfolioList(ListView):
+class BgPortfolioList(LoginRequiredMixin, ListView):
     model = BgPortfolio
     template_name = 'portfolio/portfolio_bg_list.html'
     context_object_name = 'portfolio'
@@ -21,8 +21,7 @@ class BgPortfolioList(ListView):
         return context
 
 
-@login_required()
-class BgPortfolioUpdateView(SuccessMessageMixin, UpdateView):
+class BgPortfolioUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = BgPortfolio
     form_class = BgPortfolioForm
     success_url = reverse_lazy('portfolio-bg-list')
@@ -36,8 +35,7 @@ class BgPortfolioUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class PortfolioList(ListView):
+class PortfolioList(LoginRequiredMixin, ListView):
     model = Portfolio
     template_name = 'portfolio/portfolio_list.html'
     context_object_name = 'portfolio'
@@ -80,8 +78,7 @@ def new_portfolio(request):
     })
 
 
-@login_required()
-class PortfolioUpdateView(SuccessMessageMixin, UpdateView):
+class PortfolioUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Portfolio
     form_class = PortfolioForm
     success_url = reverse_lazy('portfolio-list')
@@ -105,8 +102,7 @@ def portfolio_delete(request, id):
         return redirect('portfolio-list')
 
 
-@login_required()
-class PortfolioDetailList(ListView):
+class PortfolioDetailList(LoginRequiredMixin, ListView):
     model = PortfolioDetails
     template_name = 'portfolio/portfolio_detail_list.html'
     context_object_name = 'portfolio'
@@ -149,8 +145,7 @@ def new_portfolio_detail(request):
     })
 
 
-@login_required()
-class PortfolioDetailUpdateView(SuccessMessageMixin, UpdateView):
+class PortfolioDetailUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = PortfolioDetails
     form_class = PortfolioDetailsForm
     success_url = reverse_lazy('portfolio-detail-list')

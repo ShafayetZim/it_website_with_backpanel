@@ -5,10 +5,10 @@ from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-@login_required()
-class BgContactList(ListView):
+class BgContactList(LoginRequiredMixin, ListView):
     model = ContactBg
     template_name = 'contact/contact_bg_list.html'
     context_object_name = 'contact'
@@ -21,8 +21,7 @@ class BgContactList(ListView):
         return context
 
 
-@login_required()
-class BgContactUpdateView(SuccessMessageMixin, UpdateView):
+class BgContactUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = ContactBg
     form_class = ContactBgForm
     success_url = reverse_lazy('contact-bg-list')
@@ -36,8 +35,7 @@ class BgContactUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class ContactList(ListView):
+class ContactList(LoginRequiredMixin, ListView):
     model = Contact
     template_name = 'contact/contact_list.html'
     context_object_name = 'contact'
@@ -80,8 +78,7 @@ def new_contact(request):
     })
 
 
-@login_required()
-class ContactUpdateView(SuccessMessageMixin, UpdateView):
+class ContactUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Contact
     form_class = ContactForm
     success_url = reverse_lazy('contact-list')
@@ -105,8 +102,7 @@ def contact_delete(request, id):
         return redirect('contact-list')
 
 
-@login_required()
-class PhoneList(ListView):
+class PhoneList(LoginRequiredMixin, ListView):
     model = Phone
     template_name = 'contact/phone_list.html'
     context_object_name = 'phone'
@@ -149,8 +145,7 @@ def new_phone(request):
     })
 
 
-@login_required()
-class PhoneUpdateView(SuccessMessageMixin, UpdateView):
+class PhoneUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Phone
     form_class = PhoneForm
     success_url = reverse_lazy('phone-list')
@@ -174,8 +169,7 @@ def phone_delete(request, id):
         return redirect('phone-list')
 
 
-@login_required()
-class EmailList(ListView):
+class EmailList(LoginRequiredMixin, ListView):
     model = Email
     template_name = 'contact/email_list.html'
     context_object_name = 'email'
@@ -218,8 +212,7 @@ def new_email(request):
     })
 
 
-@login_required()
-class EmailUpdateView(SuccessMessageMixin, UpdateView):
+class EmailUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Email
     form_class = EmailForm
     success_url = reverse_lazy('email-list')
@@ -243,8 +236,7 @@ def email_delete(request, id):
         return redirect('email-list')
 
 
-@login_required()
-class OfficeList(ListView):
+class OfficeList(LoginRequiredMixin, ListView):
     model = Office
     template_name = 'contact/office_list.html'
     context_object_name = 'office'
@@ -287,8 +279,7 @@ def new_office(request):
     })
 
 
-@login_required()
-class OfficeUpdateView(SuccessMessageMixin, UpdateView):
+class OfficeUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Office
     form_class = OfficeForm
     success_url = reverse_lazy('office-list')

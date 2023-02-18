@@ -8,6 +8,7 @@ from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 @login_required()
@@ -18,8 +19,7 @@ def dashboard(request):
     return render(request, 'index.html', context)
 
 
-@login_required()
-class BgPricingList(ListView):
+class BgPricingList(LoginRequiredMixin, ListView):
     model = BgPricing
     template_name = 'pricing/pricing_bg_list.html'
     context_object_name = 'pricing'
@@ -32,8 +32,7 @@ class BgPricingList(ListView):
         return context
 
 
-@login_required()
-class BgPricingUpdateView(SuccessMessageMixin, UpdateView):
+class BgPricingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = BgPricing
     form_class = BgPricingCreateForm
     success_url = reverse_lazy('pricing-bg-list')
@@ -47,8 +46,7 @@ class BgPricingUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class PricingList(ListView):
+class PricingList(LoginRequiredMixin, ListView):
     model = Pricing
     template_name = 'pricing/pricing_list.html'
     context_object_name = 'pricing'
@@ -91,8 +89,7 @@ def new_pricing(request):
     })
 
 
-@login_required()
-class PricingUpdateView(SuccessMessageMixin, UpdateView):
+class PricingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Pricing
     form_class = PricingCreateForm
     success_url = reverse_lazy('pricing-list')

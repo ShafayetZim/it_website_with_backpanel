@@ -5,10 +5,10 @@ from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-@login_required()
-class BgServiceList(ListView):
+class BgServiceList(LoginRequiredMixin, ListView):
     model = BgService
     template_name = 'service/service_bg_list.html'
     context_object_name = 'service'
@@ -21,8 +21,7 @@ class BgServiceList(ListView):
         return context
 
 
-@login_required()
-class BgServiceUpdateView(SuccessMessageMixin, UpdateView):
+class BgServiceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = BgService
     form_class = BgServiceForm
     success_url = reverse_lazy('service-bg-list')
@@ -36,8 +35,7 @@ class BgServiceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class ExperienceList(ListView):
+class ExperienceList(LoginRequiredMixin, ListView):
     model = Experience
     template_name = 'service/experience_list.html'
     context_object_name = 'experience_service'
@@ -50,8 +48,7 @@ class ExperienceList(ListView):
         return context
 
 
-@login_required()
-class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
+class ExperienceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Experience
     form_class = Experience
     success_url = reverse_lazy('experience-list')
@@ -65,8 +62,7 @@ class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
-class ServiceList(ListView):
+class ServiceList(LoginRequiredMixin, ListView):
     model = Service
     template_name = 'service/service_list.html'
     context_object_name = 'service'
@@ -109,8 +105,7 @@ def new_service(request):
     })
 
 
-@login_required()
-class ServiceUpdateView(SuccessMessageMixin, UpdateView):
+class ServiceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Service
     form_class = ServiceForm
     success_url = reverse_lazy('service-list')
@@ -134,8 +129,7 @@ def service_delete(request, id):
         return redirect('service-list')
 
 
-@login_required()
-class ProgressList(ListView):
+class ProgressList(LoginRequiredMixin, ListView):
     model = Progress
     template_name = 'service/progress_list.html'
     context_object_name = 'progress'
@@ -178,8 +172,7 @@ def new_progress(request):
     })
 
 
-@login_required()
-class ProgressUpdateView(SuccessMessageMixin, UpdateView):
+class ProgressUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Progress
     form_class = ProgressForm
     success_url = reverse_lazy('progress-list')
@@ -203,8 +196,7 @@ def progress_delete(request, id):
         return redirect('progress-list')
 
 
-@login_required()
-class TestimonialList(ListView):
+class TestimonialList(LoginRequiredMixin, ListView):
     model = Testimonial
     template_name = 'service/testimonial_list.html'
     context_object_name = 'testimonial'
@@ -247,8 +239,7 @@ def new_testimonial(request):
     })
 
 
-@login_required()
-class TestimonialUpdateView(SuccessMessageMixin, UpdateView):
+class TestimonialUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Testimonial
     form_class = TestimonialForm
     success_url = reverse_lazy('testimonial-list')
@@ -272,8 +263,7 @@ def testimonial_delete(request, id):
         return redirect('testimonial-list')
 
 
-@login_required()
-class ReviewList(ListView):
+class ReviewList(LoginRequiredMixin, ListView):
     model = Review
     template_name = 'service/review_list.html'
     context_object_name = 'review'
@@ -316,8 +306,7 @@ def new_review(request):
     })
 
 
-@login_required()
-class ReviewUpdateView(SuccessMessageMixin, UpdateView):
+class ReviewUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Review
     form_class = ReviewForm
     success_url = reverse_lazy('review-list')

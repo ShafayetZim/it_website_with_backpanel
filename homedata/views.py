@@ -1,15 +1,14 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.contrib import messages
-from .models import *
 from .forms import *
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-@login_required()
-class SliderList(ListView):
+class SliderList(LoginRequiredMixin, ListView):
     model = Slider
     template_name = 'home/slider_list.html'
     context_object_name = 'slider'
@@ -52,8 +51,7 @@ def new_slider(request):
     })
 
 
-@login_required()
-class SliderUpdateView(SuccessMessageMixin, UpdateView):
+class SliderUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Slider
     form_class = SliderForm
     success_url = reverse_lazy('slider-list')
@@ -77,8 +75,7 @@ def slider_delete(request, id):
         return redirect('slider-list')
 
 
-@login_required()
-class ServiceList(ListView):
+class ServiceList(LoginRequiredMixin, ListView):
     model = Service
     template_name = 'home/service_list.html'
     context_object_name = 'service'
@@ -121,8 +118,7 @@ def new_service(request):
     })
 
 
-@login_required()
-class ServiceUpdateView(SuccessMessageMixin, UpdateView):
+class ServiceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Service
     form_class = ServiceForm
     success_url = reverse_lazy('service-list')
@@ -146,8 +142,7 @@ def service_delete(request, id):
         return redirect('service-list')
 
 
-@login_required()
-class ProjectList(ListView):
+class ProjectList(LoginRequiredMixin, ListView):
     model = Project
     template_name = 'home/project_list.html'
     context_object_name = 'project'
@@ -190,8 +185,7 @@ def new_project(request):
     })
 
 
-@login_required()
-class ProjectUpdateView(SuccessMessageMixin, UpdateView):
+class ProjectUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Project
     form_class = ProjectForm
     success_url = reverse_lazy('project-list')
@@ -215,8 +209,7 @@ def project_delete(request, id):
         return redirect('project-list')
 
 
-@login_required()
-class ExperienceList(ListView):
+class ExperienceList(LoginRequiredMixin, ListView):
     model = Experience
     template_name = 'home/experience_list.html'
     context_object_name = 'experience'
@@ -259,8 +252,7 @@ def new_experience(request):
     })
 
 
-@login_required()
-class ExperienceUpdateView(SuccessMessageMixin, UpdateView):
+class ExperienceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Experience
     form_class = ExperienceForm
     success_url = reverse_lazy('experience-home-list')
@@ -284,8 +276,7 @@ def experience_delete(request, id):
         return redirect('experience-home-list')
 
 
-@login_required()
-class AboutList(ListView):
+class AboutList(LoginRequiredMixin, ListView):
     model = About
     template_name = 'home/about_list.html'
     context_object_name = 'about'
@@ -328,8 +319,7 @@ def new_about(request):
     })
 
 
-@login_required()
-class AboutUpdateView(SuccessMessageMixin, UpdateView):
+class AboutUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = About
     form_class = AboutForm
     success_url = reverse_lazy('about-list')
@@ -353,8 +343,7 @@ def about_delete(request, id):
         return redirect('about-list')
 
 
-@login_required()
-class SpecialityList(ListView):
+class SpecialityList(LoginRequiredMixin, ListView):
     model = Speciality
     template_name = 'home/speciality_list.html'
     context_object_name = 'speciality'
@@ -397,8 +386,7 @@ def new_speciality(request):
     })
 
 
-@login_required()
-class SpecialityUpdateView(SuccessMessageMixin, UpdateView):
+class SpecialityUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Speciality
     form_class = SpecialityForm
     success_url = reverse_lazy('speciality-list')
