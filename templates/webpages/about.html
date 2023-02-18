@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Shafayet Jamil Zim" content="author" />
+    <title>EKATTOR iT | About</title>
+    <link rel="stylesheet" href="{% static 'web/app/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/dist/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+  </head>
+  <body class="header-fixed inner-page about counter-scroll">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header_main" class="header">
+        <div class="container">
+          <div id="site-header-inner">
+            <div class="header__logo">
+              <a href="index.html"
+                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              /></a>
+            </div>
+
+            <!-- /#main-nav -->
+            <div class="header-right">
+              <div class="header-search flat-show-search" id="s1">
+                <nav id="main-nav" class="main-nav">
+                  <ul id="menu-primary-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="{% url 'home-page' %}">Home</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                      <a href="{% url 'about-page' %}">About</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'service-page' %}">Service</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'pricing-page' %}">Pricing</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'blog-page' %}">Blog</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'contact-page' %}">contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mobile-button"><span></span></div>
+            <!-- /.mobile-button -->
+          </div>
+        </div>
+      </header>
+      <!-- end Header -->
+
+      <section class="page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="breadcrumbs">
+                <h1 class="heading">About Us</h1>
+                <ul>
+                  <li><a href="{% url 'home-page' %}">Home</a></li>
+                  <li>About Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-about style2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 tf-animated-fadeup">
+              <div class="content-about">
+                <div class="title-section style2 mb29">
+                  <p class="sub-title">Know About Us</p>
+                  <h2 class="title txt-capitalize">
+                    The world’s IT networking company.
+                  </h2>
+                </div>
+                <p class="txt-transform pr60">
+                  Phasellus scelerisque est dui, vel interdum quam viverra sed.
+                  Donec sit amet ipsum non purus
+                </p>
+                <div class="wrap-icon-box">
+                  <div class="icon-box st2">
+                    <h5 class="title">
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="15" cy="15" r="14.5" stroke="#00B0FC" />
+                        <path
+                          d="M8.64062 14.0269C8.32997 14.0277 8.02591 14.1166 7.76362 14.283C7.50133 14.4495 7.29153 14.6868 7.15849 14.9676C7.02546 15.2483 6.97462 15.5609 7.01187 15.8694C7.04911 16.1778 7.17292 16.4693 7.36896 16.7103L11.5481 21.8297C11.6971 22.0148 11.8881 22.1616 12.1052 22.2579C12.3223 22.3543 12.5593 22.3975 12.7965 22.3839C13.3038 22.3567 13.7617 22.0853 14.0537 21.6391L22.7348 7.65827C22.7362 7.65595 22.7377 7.65363 22.7392 7.65135C22.8207 7.52628 22.7943 7.27844 22.6261 7.12274C22.58 7.07998 22.5255 7.04713 22.4661 7.02621C22.4068 7.0053 22.3438 6.99675 22.281 7.00111C22.2182 7.00546 22.157 7.02262 22.1011 7.05154C22.0452 7.08045 21.9958 7.1205 21.9559 7.16923C21.9528 7.17306 21.9496 7.17683 21.9463 7.18055L13.1913 17.0724C13.158 17.11 13.1175 17.1407 13.0723 17.1625C13.027 17.1844 12.9779 17.1971 12.9277 17.1998C12.8775 17.2025 12.8272 17.1952 12.7799 17.1784C12.7325 17.1615 12.689 17.1354 12.6518 17.1016L9.74621 14.4574C9.44443 14.1808 9.05001 14.0272 8.64062 14.0269Z"
+                          fill="#00B0FC"
+                        />
+                      </svg>
+                      <a href="#">cyber security</a>
+                    </h5>
+                    <p>Phasellus scelerisque est dui, vel interdum quam</p>
+                  </div>
+                  <div class="icon-box st2">
+                    <h5 class="title">
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="15" cy="15" r="14.5" stroke="#00B0FC" />
+                        <path
+                          d="M8.64062 14.0269C8.32997 14.0277 8.02591 14.1166 7.76362 14.283C7.50133 14.4495 7.29153 14.6868 7.15849 14.9676C7.02546 15.2483 6.97462 15.5609 7.01187 15.8694C7.04911 16.1778 7.17292 16.4693 7.36896 16.7103L11.5481 21.8297C11.6971 22.0148 11.8881 22.1616 12.1052 22.2579C12.3223 22.3543 12.5593 22.3975 12.7965 22.3839C13.3038 22.3567 13.7617 22.0853 14.0537 21.6391L22.7348 7.65827C22.7362 7.65595 22.7377 7.65363 22.7392 7.65135C22.8207 7.52628 22.7943 7.27844 22.6261 7.12274C22.58 7.07998 22.5255 7.04713 22.4661 7.02621C22.4068 7.0053 22.3438 6.99675 22.281 7.00111C22.2182 7.00546 22.157 7.02262 22.1011 7.05154C22.0452 7.08045 21.9958 7.1205 21.9559 7.16923C21.9528 7.17306 21.9496 7.17683 21.9463 7.18055L13.1913 17.0724C13.158 17.11 13.1175 17.1407 13.0723 17.1625C13.027 17.1844 12.9779 17.1971 12.9277 17.1998C12.8775 17.2025 12.8272 17.1952 12.7799 17.1784C12.7325 17.1615 12.689 17.1354 12.6518 17.1016L9.74621 14.4574C9.44443 14.1808 9.05001 14.0272 8.64062 14.0269Z"
+                          fill="#00B0FC"
+                        />
+                      </svg>
+                      <a href="#">software engineer</a>
+                    </h5>
+                    <p>Phasellus scelerisque est dui, vel interdum quam</p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="content-progress-box style2 animated-effect pr100">
+                  <div class="progress-bar" data-percentage="85%">
+                    <h6 class="progress-title-holder">
+                      <span class="progress-title">Software Development</span>
+                      <span class="progress-number-wrapper">
+                        <span class="progress-number-mark">
+                          <span class="percent"></span>
+                        </span>
+                      </span>
+                    </h6>
+                    <div class="progress-content-outter">
+                      <div class="progress-content"></div>
+                    </div>
+                  </div>
+                  <div class="progress-bar" data-percentage="65%">
+                    <h6 class="progress-title-holder">
+                      <span class="progress-title">Product Development</span>
+                      <span class="progress-number-wrapper">
+                        <span class="progress-number-mark">
+                          <span class="percent"></span>
+                        </span>
+                      </span>
+                    </h6>
+                    <div class="progress-content-outter">
+                      <div class="progress-content"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="img-about tf-animated-fadeup">
+                <div class="img1 animated-effect">
+                  <img
+                    src="{% static 'web/assets/images/common/imgabout11.jpg' %}"
+                    alt=""
+                    class="effect-img-about"
+                  />
+                </div>
+                <div class="img2 animated-effect">
+                  <img
+                    src="{% static 'web/assets/images/common/imgabout10.jpg' %}"
+                    alt=""
+                    class="effect-img-about"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section working-experience">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 left">
+              <div class="image">
+                <img src="{% static 'web/assets/images/common/imgabout.jpg' %}" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="content-box tf-animated-fadeup">
+                <div class="title-section style2 mb39">
+                  <p class="sub-title">Working Experience</p>
+                  <h2 class="title txt-capitalize">
+                    We specialize in custom -tailored software solutions
+                  </h2>
+                </div>
+                <div class="experience-box animated-effect">
+                  <div class="box">
+                    <div class="icon">
+                      <span class="icon-Icon51"></span>
+                    </div>
+                    <div class="box-couter counter">
+                      <div class="number-content">
+                        <span
+                          class="count-number"
+                          data-to="259"
+                          data-speed="2000"
+                          data-inviewport="yes"
+                          >259</span
+                        ><span>K</span>
+                      </div>
+                      <p>Project Complated</p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="icon">
+                      <span class="icon-Icon61"></span>
+                    </div>
+                    <div class="box-couter counter">
+                      <div class="number-content">
+                        <span
+                          class="count-number"
+                          data-to="254"
+                          data-speed="2000"
+                          data-inviewport="yes"
+                          >254</span
+                        ><span>K</span>
+                      </div>
+                      <p>Satisfied clients</p>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="icon">
+                      <span class="icon-Icon71"></span>
+                    </div>
+                    <div class="box-couter counter">
+                      <div class="number-content">
+                        <span
+                          class="count-number"
+                          data-to="129"
+                          data-speed="2000"
+                          data-inviewport="yes"
+                          >129</span
+                        ><span>+</span>
+                      </div>
+                      <p>National Award</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section work-process pb0 mobie-pb0 tf-animated-fadeup">
+        <img src="{% static 'web/assets/images/backgroup/shape1.png' %}" alt="" class="shape1" />
+        <img src="{% static 'web/assets/images/backgroup/shape2.png' %}" alt="" class="shape2" />
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title-section mb69">
+                <p class="sub-title">Work Process</p>
+                <h2 class="title txt-capitalize">Our Work Process</h2>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+              <div class="icon-box st4">
+                <div class="icon">
+                  <span class="icon-drag-1"></span>
+                  <span class="number">01</span>
+                </div>
+                <h5 class="title">
+                  <a href="service.html">Your Goal Setting</a>
+                </h5>
+                <p>Phasellus posuere id ligula id dictum. Praesent rutru</p>
+              </div>
+            </div>
+            <div
+              class="col-xl-4 col-lg-6 col-md-6 position-relative animated-effect"
+            >
+              <span class="arrow1"
+                ><svg
+                  width="100"
+                  height="94"
+                  viewBox="0 0 100 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M93.2839 42.9269C93.2224 43.0367 93.1582 43.1321 93.1023 43.202C93.0651 43.1882 93.0212 43.1715 92.9699 43.1514C92.8001 43.085 92.5773 42.9932 92.3009 42.8775C92.1055 42.7957 91.8833 42.702 91.6363 42.5977C91.1905 42.4095 90.6636 42.1872 90.0665 41.9391C88.2043 41.1654 85.6278 40.1283 82.4951 39.0132C76.2314 36.7837 67.7379 34.24 58.2733 32.8653C41.7914 30.4714 22.2881 31.6149 6.51733 44.223C17.0655 34.8895 33.1731 30.8141 48.9584 30.4755C58.511 30.2707 67.9021 31.4368 75.7951 33.61C83.6118 35.7623 89.8974 38.8853 93.439 42.5869C93.4083 42.6802 93.3542 42.8014 93.2839 42.9269Z"
+                    stroke="#00B0FC"
+                  />
+                  <path
+                    d="M92.5913 42.3482C89.8896 40.2882 87.489 37.9272 85.9802 34.9299C86.013 34.8498 86.0641 34.7467 86.1251 34.6424C86.1441 34.6099 86.1631 34.5789 86.1816 34.5501C87.2099 35.2934 88.2169 36.0457 89.2207 36.7957C91.6474 38.6089 94.0555 40.408 96.6993 42.0308C95.2856 41.9647 93.9099 42.0874 92.5913 42.3482ZM98.0324 43.1587C97.8418 43.4773 97.6551 43.7966 97.4699 44.1135L97.4682 44.1165C97.2441 44.4998 97.0223 44.8794 96.7958 45.2541C95.7569 44.5836 94.7188 43.8955 93.7099 43.1735C95.1035 42.9765 96.5525 42.9509 98.0324 43.1587ZM92.3527 43.4215C93.2503 44.0912 94.1703 44.7252 95.0901 45.3346C93.195 45.4656 90.7935 45.9853 88.4244 46.7596C85.6136 47.6782 82.7534 48.9859 80.7493 50.5204C80.7958 50.4395 80.8469 50.3563 80.9018 50.272C81.1178 49.9407 81.3654 49.6352 81.5595 49.4385C83.7197 47.3394 87.6556 44.4726 92.3527 43.4215Z"
+                    stroke="#00B0FC"
+                  />
+                </svg>
+              </span>
+              <span class="arrow2"
+                ><svg
+                  width="100"
+                  height="94"
+                  viewBox="0 0 100 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M93.2839 50.3053C93.2224 50.1955 93.1582 50.1 93.1023 50.0302C93.0651 50.044 93.0212 50.0607 92.9699 50.0808C92.8001 50.1472 92.5773 50.2389 92.3009 50.3547C92.1055 50.4365 91.8833 50.5302 91.6363 50.6345C91.1905 50.8226 90.6636 51.045 90.0665 51.2931C88.2043 52.0668 85.6278 53.1038 82.4951 54.2189C76.2314 56.4485 67.7379 58.9921 58.2733 60.3668C41.7914 62.7608 22.2881 61.6173 6.51733 49.0092C17.0655 58.3427 33.1731 62.4181 48.9584 62.7566C58.511 62.9615 67.9021 61.7954 75.7951 59.6221C83.6118 57.4699 89.8974 54.3469 93.439 50.6453C93.4083 50.552 93.3542 50.4307 93.2839 50.3053Z"
+                    stroke="#00B0FC"
+                  />
+                  <path
+                    d="M92.5913 50.884C89.8896 52.944 87.489 55.305 85.9802 58.3023C86.013 58.3823 86.0641 58.4855 86.1251 58.5897C86.1441 58.6223 86.1631 58.6532 86.1816 58.6821C87.2099 57.9388 88.2169 57.1864 89.2207 56.4365C91.6474 54.6233 94.0555 52.8242 96.6993 51.2013C95.2856 51.2675 93.9099 51.1448 92.5913 50.884ZM98.0324 50.0735C97.8418 49.7549 97.6551 49.4355 97.4699 49.1187L97.4682 49.1157C97.2441 48.7324 97.0223 48.3528 96.7958 47.9781C95.7569 48.6485 94.7188 49.3367 93.7099 50.0587C95.1035 50.2557 96.5525 50.2813 98.0324 50.0735ZM92.3527 49.8106C93.2503 49.141 94.1703 48.507 95.0901 47.8975C93.195 47.7665 90.7935 47.2468 88.4244 46.4726C85.6136 45.554 82.7534 44.2463 80.7493 42.7117C80.7958 42.7927 80.8469 42.8759 80.9018 42.9602C81.1178 43.2914 81.3654 43.597 81.5595 43.7936C83.7197 45.8927 87.6556 48.7595 92.3527 49.8106Z"
+                    stroke="#00B0FC"
+                  />
+                </svg>
+              </span>
+              <div class="icon-box st4 mt129 animated2 animated-effect">
+                <div class="icon">
+                  <span class="icon-choose-1"></span>
+                  <span class="number">02</span>
+                </div>
+                <h5 class="title">
+                  <a href="service.html">Select Services</a>
+                </h5>
+                <p>Phasellus posuere id ligula id dictum. Praesent rutru</p>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 animated-effect">
+              <div class="icon-box st4 mobie-bt0">
+                <div class="icon">
+                  <span class="icon-creative-1"></span>
+                  <span class="number">03</span>
+                </div>
+                <h5 class="title"><a href="service.html">Solve Problem</a></h5>
+                <p>Phasellus posuere id ligula id dictum. Praesent rutru</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-team">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb39">
+                <p class="sub-title">Our Team</p>
+                <h2 class="title">We Provide The Best IT Solution Services</h2>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="swiper-container slider-team animated-effect">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="team-box style2 active">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/team5.jpg' %}" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Al Mahmud</a>
+                        </h5>
+                        <p class="desc">UI- Designer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="team-box style2">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/team6.jpg' %}" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Michelle monaghan</a>
+                        </h5>
+                        <p class="desc">Graphic Designer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="team-box style2">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/team7.jpg' %}" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Michelle Williams</a>
+                        </h5>
+                        <p class="desc">UI- Designer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="team-box style2">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/team8.jpg' %}" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Michael Jordan</a>
+                        </h5>
+                        <p class="desc">Software engineer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-partner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb39">
+                <p class="sub-title">Our Client</p>
+                <h2 class="title">We Provide The Best IT Solution Services</h2>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div
+                class="swiper-container slider-service sl-partner item-parner animated-effect"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="partner-box">
+                      <div class="image">
+                        <img src="{% static 'web/assets/images/common/partner1.png' %}" alt="" />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p><a href="#">IT Technology Solution</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-12 tf-animated-fadeup">
+              <div class="service-pagination animated-effect"></div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-inner">
+                  <h3>Solve your IT needs today!</h3>
+                  <a href="service.html" class="tf-button"
+                    ><span>Get Solutions</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="bg-overlay"></div>
+          <div class="bg-overlay2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="widget widget-logo">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  </a>
+                </div>
+                <p class="desc">
+                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
+                  aliquet orci, in scelerisque nulla sem non justo.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="widget widget-service">
+                <h5 class="widget-title">Our Services</h5>
+                <ul class="widget-link">
+                  <li>
+                    <a href="{% url 'home-page' %}">About Us</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'about-page' %}">Service</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'pricing-page' %}">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'contact-page' %}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-infomation">
+                <h5 class="widget-title">Infomation</h5>
+                <ul class="infomation">
+                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li class="style">
+                    <ul>
+                      <li>Monal@gmail.com</li>
+                      <li>hotline@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li>+1 246-345-069</li>
+                </ul>
+              </div>
+              <div class="widget widget-subscribe">
+                <h5 class="widget-title">Subscribe</h5>
+                <p>
+                  Sign up for our latest news & articles. We won’t give you spam
+                  mails.
+                </p>
+                <form action="#" id="subscribe-form">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="email"
+                    id="subscribe-email"
+                    required
+                  />
+                  <button type="submit" id="subscribe-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2075_4097)">
+                        <path
+                          d="M16.4453 20C16.5209 20 16.597 19.9857 16.6696 19.9553C16.8888 19.865 17.0312 19.6509 17.0312 19.4141V0.585919C17.0312 0.349044 16.8888 0.135021 16.6696 0.0446301C16.4499 -0.0463465 16.1987 0.00459099 16.031 0.171661L3.1404 13.1014C2.97275 13.269 2.9224 13.5208 3.01337 13.74C3.10376 13.9591 3.31779 14.1016 3.55466 14.1016H10.3433L16.031 19.8284C16.1432 19.9405 16.2931 20 16.4453 20Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2075_4097">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 20 0)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-12">
+                <div class="footer-bottom">
+                  <div class="wrap-fx">
+                    <div class="Copyright">
+                      <span
+                        >© 2023. <a href="https://www.ekattorit.com">
+                        <span style="color:green"><b>EKATTOR</b></span>
+                        <span style="color:red"><b>iT</b></span></a> All rights
+                        reserved.</span
+                      >
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'about-page' %}">About</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'service-page' %}">Service</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'pricing-page' %}">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a id="scroll-top"></a>
+    <script src="{% static 'web/app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'web/app/js/app.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery.easing.js' %}"></script>
+    <script src="{% static 'web/app/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/app/js/swiper.js' %}"></script>
+    <script src="{% static 'web/app/js/animated.js' %}"></script>
+    <script src="{% static 'web/app/js/countto.js' %}"></script>
+    <script src="{% static 'web/app/js/plugin.js' %}"></script>
+  </body>
+</html>

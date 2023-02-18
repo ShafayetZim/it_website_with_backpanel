@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Shafayet Jamil Zim" content="author" />
+    <title>EKATTOR iT | Service</title>
+    <link rel="stylesheet" href="{% static 'web/app/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/dist/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+  </head>
+  <body class="header-fixed inner-page service">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header_main" class="header">
+        <div class="container">
+          <div id="site-header-inner">
+            <div class="header__logo">
+              <a href="index.html"
+                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              /></a>
+            </div>
+
+            <!-- /#main-nav -->
+            <div class="header-right">
+              <div class="header-search flat-show-search" id="s1">
+                <nav id="main-nav" class="main-nav">
+                  <ul id="menu-primary-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="{% url 'home-page' %}">Home</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'about-page' %}">About</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                      <a href="{% url 'service-page' %}">Service</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'pricing-page' %}">Pricing</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'blog-page' %}">Blog</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'contact-page' %}l">contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mobile-button"><span></span></div>
+            <!-- /.mobile-button -->
+          </div>
+        </div>
+      </header>
+      <!-- end Header -->
+
+      <section class="page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="breadcrumbs">
+                <h1 class="heading">Services</h1>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>Services</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-service style">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb68">
+                <p class="sub-title">Popular Services</p>
+                <h2 class="title">We provide ITSolution</h2>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div
+                class="swiper-container slider-service show-shadow animated-effect"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-web-development-1"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Website Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-Group"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Software Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-Group2"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Games Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect mobie-bt0">
+                      <div class="icon">
+                        <span class="icon-ux-interface"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">UI-UX Designing</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-web-development-1"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Website Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-Group"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Software Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-Group2"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Games Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect mobie-bt0">
+                      <div class="icon">
+                        <span class="icon-ux-interface"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">UI-UX Designing</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section experience">
+        <div class="overlay"></div>
+        <div class="overlay-img">
+          <img src="{% static 'web/assets/images/common/imgservice.jpg' %}" alt="" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 left tf-animated-fadeup">
+              <div class="experience-box animated-effect">
+                <div class="title-section style2">
+                  <p class="sub-title">Experience</p>
+                  <h2 class="title txt-capitalize">Creating value with Tech</h2>
+                </div>
+                <div class="content-progress-box style2 animated-effect">
+                  <div class="progress-bar" data-percentage="85%">
+                    <h6 class="progress-title-holder">
+                      <span class="progress-title">Software Development</span>
+                      <span class="progress-number-wrapper">
+                        <span class="progress-number-mark">
+                          <span class="percent"></span>
+                        </span>
+                      </span>
+                    </h6>
+                    <div class="progress-content-outter">
+                      <div class="progress-content"></div>
+                    </div>
+                  </div>
+                  <div class="progress-bar" data-percentage="65%">
+                    <h6 class="progress-title-holder">
+                      <span class="progress-title">Product Development</span>
+                      <span class="progress-number-wrapper">
+                        <span class="progress-number-mark">
+                          <span class="percent"></span>
+                        </span>
+                      </span>
+                    </h6>
+                    <div class="progress-content-outter">
+                      <div class="progress-content"></div>
+                    </div>
+                  </div>
+                  <div class="progress-bar" data-percentage="90%">
+                    <h6 class="progress-title-holder">
+                      <span class="progress-title">UI-UX Research</span>
+                      <span class="progress-number-wrapper">
+                        <span class="progress-number-mark">
+                          <span class="percent"></span>
+                        </span>
+                      </span>
+                    </h6>
+                    <div class="progress-content-outter">
+                      <div class="progress-content"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-testimonior">
+        <img src="{% static 'web/assets/images/backgroup/shape1.png' %}" alt="" class="shape1" />
+        <img src="{% static 'web/assets/images/backgroup/shape2.png' %}" alt="" class="shape2" />
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-12 tf-animated-fadeup">
+              <div class="testimonior-content animated-effect">
+                <div class="title-section style2 mb29">
+                  <p class="sub-title">TESTIMONIAL</p>
+                  <h2 class="title">Clients Feedback Examples You</h2>
+                </div>
+                <p class="txt-transform pr65">
+                  Pellentesque gravida lectus vitae nisi luctus, finibus aliquet
+                  ligula ultrices.
+                </p>
+                <div class="wrap-img mt40">
+                  <div class="swiper-container slider-testimonior-thum">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior1.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior2.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior3.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior4.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image style">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior5.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image style">
+                          <a href="#" class="nolink"
+                            ><i class="far fa-plus"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-xl-7 col-lg-6 col-md-12 tf-animated-fadeup position-relative"
+            >
+              <div class="wrap-testimonior-style">
+                <div
+                  class="swiper-container slider-testimonior style2 animated-effect"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="testimonior-box">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior6.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <p>
+                            Proin tortor mauris, consectetur sit amet faucibus
+                            mattis, pretium ac felis. Vestibulum
+                          </p>
+                          <h4>Al Mahmud</h4>
+                          <p class="desc">UI- Designer</p>
+                          <img
+                            class="quote"
+                            src="{% static 'web/assets/images/common/quote.png' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="testimonior-box">
+                        <div class="image">
+                          <img src="{% static 'web/assets/images/post/post7.jpg' %}" alt="" />
+                        </div>
+                        <div class="content">
+                          <p>
+                            Proin tortor mauris, consectetur sit amet faucibus
+                            mattis, pretium ac felis. Vestibulum
+                          </p>
+                          <h4>Al Mahmud</h4>
+                          <p class="desc">UI- Designer</p>
+                          <img
+                            class="quote"
+                            src="{% static 'web/assets/images/common/quote.png' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="testimonior-box">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior6.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <p>
+                            Proin tortor mauris, consectetur sit amet faucibus
+                            mattis, pretium ac felis. Vestibulum
+                          </p>
+                          <h4>Al Mahmud</h4>
+                          <p class="desc">UI- Designer</p>
+                          <img
+                            class="quote"
+                            src="{% static 'web/assets/images/common/quote.png' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="testimonior-box">
+                        <div class="image">
+                          <img src="{% static 'web/assets/images/post/post7.jpg' %}" alt="" />
+                        </div>
+                        <div class="content">
+                          <p>
+                            Proin tortor mauris, consectetur sit amet faucibus
+                            mattis, pretium ac felis. Vestibulum
+                          </p>
+                          <h4>Al Mahmud</h4>
+                          <p class="desc">UI- Designer</p>
+                          <img
+                            class="quote"
+                            src="{% static 'web/assets/images/common/quote.png' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="testimonior-box">
+                        <div class="image">
+                          <img
+                            src="{% static 'web/assets/images/common/imgtestimonior6.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <p>
+                            Proin tortor mauris, consectetur sit amet faucibus
+                            mattis, pretium ac felis. Vestibulum
+                          </p>
+                          <h4>Al Mahmud</h4>
+                          <p class="desc">UI- Designer</p>
+                          <img
+                            class="quote"
+                            src="{% static 'web/assets/images/common/quote.png' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="testimonior-box">
+                        <div class="image">
+                          <img src="{% static 'web/assets/images/post/post7.jpg' %}" alt="" />
+                        </div>
+                        <div class="content">
+                          <p>
+                            Proin tortor mauris, consectetur sit amet faucibus
+                            mattis, pretium ac felis. Vestibulum
+                          </p>
+                          <h4>Al Mahmud</h4>
+                          <p class="desc">UI- Designer</p>
+                          <img
+                            class="quote"
+                            src="{% static 'web/assets/images/common/quote.png' %}"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-absolute">
+                <svg
+                  width="58"
+                  height="46"
+                  viewBox="0 0 58 46"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M57.854 0.0619237C51.4982 36.1389 3.75201 40.4904 2.15014 41.047C1.94345 41.0976 1.99511 42.1602 2.2018 42.2108C17.3421 46.2587 56.9239 25.918 57.9574 0.264332C57.9574 0.213733 57.9056 -0.140472 57.854 0.0619237Z"
+                    fill="#00B0FC"
+                  />
+                  <path
+                    d="M11.7777 44.0562C8.36721 41.9311 4.18164 41.7287 0.254469 41.6781C0.254469 42.5889 0.306129 43.4997 0.306129 44.4104C5.68016 42.3359 8.16052 36.6688 8.93562 33.5317C9.03896 33.0763 9.09064 32.2667 8.93562 31.8113C8.88394 31.7101 8.67721 30.9511 8.57387 31.5077C7.59207 35.252 2.83812 40.5649 0.306129 41.7287C-0.158931 41.9311 -0.0555968 44.461 0.35779 44.461C4.28497 44.2586 7.90215 44.7646 11.7777 45.0176C11.9327 44.967 11.881 44.1068 11.7777 44.0562Z"
+                    fill="#00B0FC"
+                  />
+                </svg>
+              </div>
+              <div class="testimonior-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-inner">
+                  <h3>Solve your IT needs today!</h3>
+                  <a href="service.html" class="tf-button"
+                    ><span>Get Solutions</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="bg-overlay"></div>
+          <div class="bg-overlay2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="widget widget-logo">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  </a>
+                </div>
+                <p class="desc">
+                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
+                  aliquet orci, in scelerisque nulla sem non justo.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="widget widget-service">
+                <h5 class="widget-title">Our Services</h5>
+                <ul class="widget-link">
+                  <li>
+                    <a href="{% url 'about-page' %}">About Us</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'service-page' %}">Service</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'pricing-page' %}">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'contact-page' %}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-infomation">
+                <h5 class="widget-title">Infomation</h5>
+                <ul class="infomation">
+                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li class="style">
+                    <ul>
+                      <li>Monal@gmail.com</li>
+                      <li>hotline@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li>+1 246-345-069</li>
+                </ul>
+              </div>
+              <div class="widget widget-subscribe">
+                <h5 class="widget-title">Subscribe</h5>
+                <p>
+                  Sign up for our latest news & articles. We won’t give you spam
+                  mails.
+                </p>
+                <form action="#" id="subscribe-form">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="email"
+                    id="subscribe-email"
+                    required
+                  />
+                  <button type="submit" id="subscribe-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2075_4097)">
+                        <path
+                          d="M16.4453 20C16.5209 20 16.597 19.9857 16.6696 19.9553C16.8888 19.865 17.0312 19.6509 17.0312 19.4141V0.585919C17.0312 0.349044 16.8888 0.135021 16.6696 0.0446301C16.4499 -0.0463465 16.1987 0.00459099 16.031 0.171661L3.1404 13.1014C2.97275 13.269 2.9224 13.5208 3.01337 13.74C3.10376 13.9591 3.31779 14.1016 3.55466 14.1016H10.3433L16.031 19.8284C16.1432 19.9405 16.2931 20 16.4453 20Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2075_4097">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 20 0)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-12">
+                <div class="footer-bottom">
+                  <div class="wrap-fx">
+                    <div class="Copyright">
+                      <span
+                        >© 2023. <a href="https://www.ekattorit.com">
+                        <span style="color:green"><b>EKATTOR</b></span>
+                        <span style="color:red"><b>iT</b></span>
+                      </a> All rights
+                        reserved.</span
+                      >
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'about-page' %}">About</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'service-page' %}">Service</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'pricing-page' %}">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a id="scroll-top"></a>
+    <script src="{% static 'web/app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'web/app/js/app.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery.easing.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'web/app/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'web/app/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/app/js/swiper.js' %}"></script>
+    <script src="{% static 'web/app/js/animated.js' %}"></script>
+    <script src="{% static 'web/app/js/countto.js' %}"></script>
+    <script src="{% static 'web/app/js/plugin.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EKATTOR iT | Service HTML Template</title>
+    <link rel="stylesheet" href="app/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="app/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="app/dist/app.css" />
+    <link rel="stylesheet" href="assets/font/font-awesome.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="header-fixed main home2 counter-scroll">
+    <!-- preloade -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- /preload -->
+    <div id="wrapper">
+      <!-- Header -->
+      <div id="top-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="topbar-inner">
+                <div class="left">
+                  <ul>
+                    <li>Email : <span>monal@gmail.com</span></li>
+                    <li>Address : <span>FRFJ+9W London, UK</span></li>
+                  </ul>
+                </div>
+                <div class="right">
+                  <div class="dropdown selector-drop language" id="language">
+                    <a
+                      href="javascript:void(0);"
+                      class="btn-selector btn-link"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="boder"></span>English
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right list-chooser">
+                      <li
+                        class="dropdown-item active"
+                        data-toggle="modal"
+                        data-target="#delete_client"
+                      >
+                        English
+                      </li>
+                      <li
+                        class="dropdown-item"
+                        data-toggle="modal"
+                        data-target="#edit_client"
+                      >
+                        France
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="social">
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header id="header_main" class="header">
+        <div class="container">
+          <div id="site-header-inner">
+            <div class="header__logo style3">
+              <a href="index.html"
+                ><img src="assets/images/logo/logo4.png" alt=""
+              /></a>
+            </div>
+            <nav id="main-nav" class="main-nav">
+              <ul id="menu-primary-menu" class="menu">
+                <li class="menu-item menu-item-has-children current-menu-item">
+                  <a href="#">Home</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="index.html">Home 1</a></li>
+                    <li class="menu-item current-item">
+                      <a href="home-2.html">Home 2</a>
+                    </li>
+                    <li class="menu-item"><a href="home-3.html">Home 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="#">About</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="about.html">About</a></li>
+                    <li class="menu-item"><a href="team.html">OurTeam</a></li>
+                    <li class="menu-item">
+                      <a href="team-details.html">Team Details</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="service.html">Service</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="service-details.html">Service Details</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="history.html">history</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="#">Portfolio</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item">
+                      <a href="porfolio.html">porfolio</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="porfolio-details.html">porfolio details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="#">Product</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item">
+                      <a href="product.html">Product</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="product-details.html">Product Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="#">News</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item">
+                      <a href="blog-standard.html">blog standard</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="blog-details.html">Blog Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="contact.html">contact Us</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /#main-nav -->
+            <div class="header-right">
+              <div class="header-search flat-show-search" id="s1">
+                <a href="#" class="show-search header-search-trigger">
+                  <span class="icon-Vector"></span>
+                </a>
+                <a href="#" class="menu-bar-right header-menu"
+                  ><i class="fas fa-bars"></i
+                ></a>
+                <div class="top-search">
+                  <form
+                    action="#"
+                    method="get"
+                    role="search"
+                    class="search-form"
+                  >
+                    <input
+                      type="search"
+                      id="s"
+                      class="search-field"
+                      placeholder="Search..."
+                      value=""
+                      name="s"
+                      title="Search for"
+                      required=""
+                    />
+                    <button
+                      class="search search-submit"
+                      type="submit"
+                      title="Search"
+                    >
+                      <i class="icon-Vector"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <a class="tf-button" href="contact.html">
+                <span>Get a Quote</span>
+              </a>
+            </div>
+            <div class="mobile-button"><span></span></div>
+            <!-- /.mobile-button -->
+          </div>
+        </div>
+        <div id="sidebar" class="side-menu__block">
+          <div class="side-menu__block-overlay custom-cursor__overlay"></div>
+          <div class="inner-sidebar side-menu__block-inner fl-st-1">
+            <div class="side-menu__top justify-content-end">
+              <a href="#" class="side-menu__toggler side-menu__close-btn"
+                ><img src="assets/images/common/close.png" alt="images"
+              /></a>
+            </div>
+            <div class="wrap">
+              <div class="widget widget-search">
+                <h4 class="widget-title">Search</h4>
+                <form action="#" class="widget-form">
+                  <input type="text" placeholder="Search......" required="" />
+                  <button><i class="icon-Vector"></i></button>
+                </form>
+              </div>
+              <div class="widget widget-category">
+                <h4 class="widget-title">Services Category</h4>
+                <ul class="list-category">
+                  <li><a href="#">Software Development</a></li>
+                  <li><a href="#">Software Development</a></li>
+                  <li><a href="#">Gaming Development</a></li>
+                  <li><a href="#">UI-UX Designing</a></li>
+                  <li><a href="#">Content Management</a></li>
+                  <li><a href="#">Cyber Securety</a></li>
+                </ul>
+              </div>
+              <div class="widget widget-recent-posts">
+                <h4 class="widget-title">Recent Post</h4>
+                <ul class="recent-posts">
+                  <li>
+                    <img src="assets/images/post/thump1.jpg" alt="" />
+                    <ul class="content">
+                      <li>
+                        <a href="blog-details.html"
+                          >Not just another Tech company</a
+                        >
+                      </li>
+                      <li class="meta-post">
+                        <a href="#">21, Feb, 2022</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="recent-posts">
+                  <li>
+                    <img src="assets/images/post/thump2.jpg" alt="" />
+                    <ul class="content">
+                      <li>
+                        <a href="blog-details.html"
+                          >Not just another Tech company</a
+                        >
+                      </li>
+                      <li class="meta-post">
+                        <a href="#">21, Feb, 2022</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="recent-posts">
+                  <li>
+                    <img src="assets/images/post/thump3.jpg" alt="" />
+                    <ul class="content">
+                      <li>
+                        <a href="blog-details.html"
+                          >Not just another Tech company</a
+                        >
+                      </li>
+                      <li class="meta-post">
+                        <a href="#">21, Feb, 2022</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-tags mobie-bt0">
+                <h4 class="widget-title">Tags</h4>
+                <ul class="list-tags">
+                  <li><a href="#">Technology</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Solution</a></li>
+                  <li><a href="#">Developement</a></li>
+                  <li><a href="#">Designing</a></li>
+                  <li><a href="#">Cyber Securety</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--/inner-sidebar-->
+        </div>
+      </header>
+      <!-- end Header -->
+
+      <section class="page-title">
+        <div class="overlay"></div>
+        <div class="overlay2"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="swiper-container slider-main">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="box-slider">
+                      <div class="content-box">
+                        <p class="sub-title">We’re the best</p>
+                        <h1 class="title">Making IT a part of your business</h1>
+                        <div class="btn-slider">
+                          <a class="tf-button" href="about.html">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="image">
+                        <div class="img">
+                          <img
+                            src="assets/images/common/imgslider.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="box-slider">
+                      <div class="content-box">
+                        <p class="sub-title">We’re the best</p>
+                        <h1 class="title">Making IT a part of your business</h1>
+                        <div class="btn-slider">
+                          <a class="tf-button" href="about.html">
+                            <span>View services</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="image">
+                        <div class="img">
+                          <img
+                            src="assets/images/common/imgslider.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="box-slider">
+                      <div class="content-box">
+                        <p class="sub-title">We’re the best</p>
+                        <h1 class="title">Making IT a part of your business</h1>
+                        <div class="btn-slider">
+                          <a class="tf-button" href="about.html">
+                            <span>View services</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="image">
+                        <div class="img">
+                          <img
+                            src="assets/images/common/imgslider.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-about style2 bg-st1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="img-about pr70 tf-animated-fadeup">
+                <img
+                  src="assets/images/common/imgabout3.jpg"
+                  alt=""
+                  class="effect-img-about"
+                />
+                <div class="experience-box animated-effect">
+                  <div class="box-couter counter">
+                    <div class="number-content">
+                      <span
+                        class="count-number"
+                        data-to="32"
+                        data-speed="2000"
+                        data-inviewport="yes"
+                        >32</span
+                      >+
+                    </div>
+                  </div>
+                  <h5>Years Expereince</h5>
+                </div>
+                <div class="img2 txt-r animated-effect">
+                  <img
+                    src="assets/images/common/imgabout4.jpg"
+                    alt=""
+                    class="effect-img-about"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 tf-animated-fadeup">
+              <div class="content-about">
+                <div class="title-section style2 mb29">
+                  <p class="sub-title">IT Technology</p>
+                  <h2 class="title">The Programmable Logic Company</h2>
+                </div>
+                <p class="txt-transform pr60">
+                  Nullam ligula mauris, euismod in dolor eget, blandit tempus
+                  dolor. Fusce sagittis semper nunc, ut ultricies ante gravida
+                  in. Integer sit amet vulputate massa, in facilisis libero.
+                </p>
+                <div class="wrap-icon-box">
+                  <div class="icon-box st2">
+                    <div class="img">
+                      <img src="assets/images/common/icon3.png" alt="" />
+                    </div>
+                    <div class="desc">
+                      <a href="about.html">network administration</a>
+                    </div>
+                  </div>
+                  <div class="icon-box st2 mb0">
+                    <div class="img style">
+                      <img src="assets/images/common/icon4.png" alt="" />
+                    </div>
+                    <div class="desc">
+                      <a href="about.html">IT Technology automation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <ul class="list">
+                  <li>
+                    <span
+                      ><svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="10" cy="10" r="9.5" stroke="#00B0FC" />
+                        <path
+                          d="M5.13835 9.48195C4.89672 9.48263 4.66023 9.5517 4.45623 9.68118C4.25223 9.81065 4.08905 9.99524 3.98558 10.2136C3.88211 10.4319 3.84257 10.6751 3.87154 10.915C3.9005 11.1549 3.9968 11.3816 4.14927 11.5691L7.3997 15.5508C7.51559 15.6947 7.66415 15.8089 7.83303 15.8839C8.00191 15.9588 8.18624 15.9924 8.3707 15.9819C8.76523 15.9607 9.12143 15.7496 9.34852 15.4026L16.1005 4.52859C16.1016 4.52679 16.1027 4.52498 16.1039 4.52321C16.1673 4.42593 16.1467 4.23316 16.016 4.11206C15.98 4.07881 15.9377 4.05326 15.8915 4.03699C15.8454 4.02072 15.7963 4.01407 15.7475 4.01746C15.6987 4.02085 15.6511 4.0342 15.6076 4.05669C15.5641 4.07917 15.5257 4.11033 15.4947 4.14822C15.4923 4.1512 15.4898 4.15414 15.4872 4.15703L8.67776 11.8507C8.65185 11.8799 8.62038 11.9038 8.58518 11.9208C8.54998 11.9378 8.51175 11.9477 8.47271 11.9498C8.43367 11.9519 8.3946 11.9462 8.35777 11.9331C8.32094 11.92 8.28708 11.8997 8.25817 11.8734L5.99824 9.81682C5.76353 9.60166 5.45675 9.48219 5.13835 9.48195Z"
+                          fill="#00B0FC"
+                        /></svg
+                    ></span>
+                    big data management and data analytics
+                  </li>
+                  <li>
+                    <span
+                      ><svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="10" cy="10" r="9.5" stroke="#00B0FC" />
+                        <path
+                          d="M5.13835 9.48195C4.89672 9.48263 4.66023 9.5517 4.45623 9.68118C4.25223 9.81065 4.08905 9.99524 3.98558 10.2136C3.88211 10.4319 3.84257 10.6751 3.87154 10.915C3.9005 11.1549 3.9968 11.3816 4.14927 11.5691L7.3997 15.5508C7.51559 15.6947 7.66415 15.8089 7.83303 15.8839C8.00191 15.9588 8.18624 15.9924 8.3707 15.9819C8.76523 15.9607 9.12143 15.7496 9.34852 15.4026L16.1005 4.52859C16.1016 4.52679 16.1027 4.52498 16.1039 4.52321C16.1673 4.42593 16.1467 4.23316 16.016 4.11206C15.98 4.07881 15.9377 4.05326 15.8915 4.03699C15.8454 4.02072 15.7963 4.01407 15.7475 4.01746C15.6987 4.02085 15.6511 4.0342 15.6076 4.05669C15.5641 4.07917 15.5257 4.11033 15.4947 4.14822C15.4923 4.1512 15.4898 4.15414 15.4872 4.15703L8.67776 11.8507C8.65185 11.8799 8.62038 11.9038 8.58518 11.9208C8.54998 11.9378 8.51175 11.9477 8.47271 11.9498C8.43367 11.9519 8.3946 11.9462 8.35777 11.9331C8.32094 11.92 8.28708 11.8997 8.25817 11.8734L5.99824 9.81682C5.76353 9.60166 5.45675 9.48219 5.13835 9.48195Z"
+                          fill="#00B0FC"
+                        /></svg
+                    ></span>
+                    Participation of public in governance and policy making.
+                  </li>
+                  <li>
+                    <span
+                      ><svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="10" cy="10" r="9.5" stroke="#00B0FC" />
+                        <path
+                          d="M5.13835 9.48195C4.89672 9.48263 4.66023 9.5517 4.45623 9.68118C4.25223 9.81065 4.08905 9.99524 3.98558 10.2136C3.88211 10.4319 3.84257 10.6751 3.87154 10.915C3.9005 11.1549 3.9968 11.3816 4.14927 11.5691L7.3997 15.5508C7.51559 15.6947 7.66415 15.8089 7.83303 15.8839C8.00191 15.9588 8.18624 15.9924 8.3707 15.9819C8.76523 15.9607 9.12143 15.7496 9.34852 15.4026L16.1005 4.52859C16.1016 4.52679 16.1027 4.52498 16.1039 4.52321C16.1673 4.42593 16.1467 4.23316 16.016 4.11206C15.98 4.07881 15.9377 4.05326 15.8915 4.03699C15.8454 4.02072 15.7963 4.01407 15.7475 4.01746C15.6987 4.02085 15.6511 4.0342 15.6076 4.05669C15.5641 4.07917 15.5257 4.11033 15.4947 4.14822C15.4923 4.1512 15.4898 4.15414 15.4872 4.15703L8.67776 11.8507C8.65185 11.8799 8.62038 11.9038 8.58518 11.9208C8.54998 11.9378 8.51175 11.9477 8.47271 11.9498C8.43367 11.9519 8.3946 11.9462 8.35777 11.9331C8.32094 11.92 8.28708 11.8997 8.25817 11.8734L5.99824 9.81682C5.76353 9.60166 5.45675 9.48219 5.13835 9.48195Z"
+                          fill="#00B0FC"
+                        /></svg
+                    ></span>
+                    Technology helps the police in nabbing the criminals.
+                  </li>
+                </ul>
+                <div class="wrap">
+                  <div class="img-box">
+                    <div class="img">
+                      <img src="assets/images/common/Imagebox2.jpg" alt="" />
+                    </div>
+                    <div class="content">
+                      <div class="name">Michel Foucault</div>
+                      <p class="desc">Fouder Of CEO</p>
+                    </div>
+                  </div>
+                  <img src="assets/images/common/signature.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-service mobie-pb0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb68">
+                <p class="sub-title">Popular Services</p>
+                <h2 class="title">We provide ITSolution</h2>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div
+                class="swiper-container slider-service show-shadow animated-effect"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-web-development-1"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Website Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-Group"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Software Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect">
+                      <div class="icon">
+                        <span class="icon-Group2"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">Games Development</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect mobie-bt0">
+                      <div class="icon">
+                        <span class="icon-ux-interface"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">UI-UX Designing</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="icon-box st3 ecffect mobie-bt0">
+                      <div class="icon">
+                        <span class="icon-ux-interface"></span>
+                      </div>
+                      <h5 class="title">
+                        <a href="service-details.html">UI-UX Designing</a>
+                      </h5>
+                      <p>
+                        Integer venenatis, orci eget sodales aliquet, tortor sem
+                      </p>
+                      <a href="service-details.html" class="readmore"
+                        ><span>Learn More</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="service-pagination animated-effect"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section get-solutions">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div
+                class="image-video txt-r ml104 position-relative animated-effect"
+              >
+                <img src="assets/images/common/imgvideo.jpg" alt="" />
+                <a
+                  href="https://www.youtube.com/watch?v=7vQznLKEfBs"
+                  class="popup-youtube"
+                  ><div class="play"><i class="fas fa-play"></i></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-7 tf-animated-fadeup">
+              <div class="box animated-effect">
+                <div class="title-section style2 mb29">
+                  <p class="sub-title">Software Development</p>
+                  <h2 class="title">Excellence in Software Engineering</h2>
+                </div>
+                <p class="txt-transform pr75 mb52">
+                  Phasellus posuere id ligula id dictum. Praesent rutrum lacinia
+                  magna, aliquam vestibulum lorem. Nunc leo nibh, congue nec
+                  luctus in, viverra vel neque.
+                </p>
+                <a href="service.html" class="tf-button"
+                  ><span>Get solutions</span></a
+                >
+              </div>
+            </div>
+            <div class="col-md-5 tf-animated-fadeup">
+              <div class="content-progress-box animated-effect">
+                <div class="progress-bar" data-percentage="85%">
+                  <h6 class="progress-title-holder">
+                    <span class="progress-title">Software Development</span>
+                    <span class="progress-number-wrapper">
+                      <span class="progress-number-mark">
+                        <span class="percent"></span>
+                      </span>
+                    </span>
+                  </h6>
+                  <div class="progress-content-outter">
+                    <div class="progress-content"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-project mobie-pb0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 tf-animated-fadeup">
+              <div class="title-section style2 mb0">
+                <p class="sub-title">Latest Project</p>
+                <h2 class="title txt-transform">
+                  check We have solution done IT project
+                </h2>
+              </div>
+            </div>
+            <div class="col-md-6 position-relative tf-animated-fadeup">
+              <div class="btn-slider-project style animated-effect">
+                <div class="prev-project2">
+                  <svg
+                    width="28"
+                    height="14"
+                    viewBox="0 0 28 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      width="1.98743"
+                      height="9.93716"
+                      transform="matrix(-0.709782 -0.704421 -0.709782 0.704421 8.46387 1.40015)"
+                      fill="url(#paint0_linear_1666_10595)"
+                    />
+                    <rect
+                      width="1.98743"
+                      height="9.93716"
+                      transform="matrix(-0.709782 0.704421 0.709782 0.704421 1.41064 5.6001)"
+                      fill="url(#paint1_linear_1666_10595)"
+                    />
+                    <rect
+                      width="14.9621"
+                      height="1.97988"
+                      transform="matrix(-1 0 0 1 16.0303 6.01001)"
+                      fill="url(#paint2_linear_1666_10595)"
+                    />
+                    <rect
+                      width="1.99495"
+                      height="1.97988"
+                      transform="matrix(-1 0 0 1 20.02 6.01001)"
+                      fill="url(#paint3_linear_1666_10595)"
+                    />
+                    <rect
+                      width="1.99495"
+                      height="1.97988"
+                      transform="matrix(-1 0 0 1 24.0103 6.01001)"
+                      fill="url(#paint4_linear_1666_10595)"
+                    />
+                    <rect
+                      width="1.99495"
+                      height="1.97988"
+                      transform="matrix(-1 0 0 1 28 6.01001)"
+                      fill="url(#paint5_linear_1666_10595)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1666_10595"
+                        x1="2.98115"
+                        y1="4.96858"
+                        x2="-0.0457025"
+                        y2="5.23731"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="1" stop-color="#CF00FE" />
+                        <stop offset="1" stop-color="#005DE0" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint1_linear_1666_10595"
+                        x1="2.98115"
+                        y1="4.96858"
+                        x2="-0.0457025"
+                        y2="5.23731"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="1" stop-color="#CF00FE" />
+                        <stop offset="1" stop-color="#005DE0" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint2_linear_1666_10595"
+                        x1="22.4432"
+                        y1="0.989942"
+                        x2="20.5689"
+                        y2="7.27758"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="1" stop-color="#CF00FE" />
+                        <stop offset="1" stop-color="#005DE0" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint3_linear_1666_10595"
+                        x1="2.99243"
+                        y1="0.989942"
+                        x2="0.44068"
+                        y2="2.13129"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="1" stop-color="#CF00FE" />
+                        <stop offset="1" stop-color="#005DE0" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint4_linear_1666_10595"
+                        x1="2.99243"
+                        y1="0.989942"
+                        x2="0.44068"
+                        y2="2.13129"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="1" stop-color="#CF00FE" />
+                        <stop offset="1" stop-color="#005DE0" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint5_linear_1666_10595"
+                        x1="2.99243"
+                        y1="0.989942"
+                        x2="0.44068"
+                        y2="2.13129"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="1" stop-color="#CF00FE" />
+                        <stop offset="1" stop-color="#005DE0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="next-project2">
+                  <svg
+                    width="28"
+                    height="14"
+                    viewBox="0 0 28 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      width="1.98743"
+                      height="9.93716"
+                      transform="matrix(0.709782 -0.704421 0.709782 0.704421 19.5361 1.40015)"
+                      fill="white"
+                    />
+                    <rect
+                      width="1.98743"
+                      height="9.93716"
+                      transform="matrix(0.709782 0.704421 -0.709782 0.704421 26.5894 5.6001)"
+                      fill="white"
+                    />
+                    <rect
+                      x="11.9697"
+                      y="6.01001"
+                      width="14.9621"
+                      height="1.97988"
+                      fill="white"
+                    />
+                    <rect
+                      x="7.97998"
+                      y="6.01001"
+                      width="1.99495"
+                      height="1.97988"
+                      fill="white"
+                    />
+                    <rect
+                      x="3.98975"
+                      y="6.01001"
+                      width="1.99495"
+                      height="1.97988"
+                      fill="white"
+                    />
+                    <rect
+                      y="6.01001"
+                      width="1.99495"
+                      height="1.97988"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="swiper-container slider-project2 animated-effect">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="project-box style2">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/img4project.jpg"
+                          alt=""
+                        />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p>IT Technology Solution</p>
+                          <h4>
+                            <a href="porfolio.html">Data Recovery analysis</a>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box style2">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/img1project.jpg"
+                          alt=""
+                        />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p>IT Technology Solution</p>
+                          <h4>
+                            <a href="porfolio.html">Data Recovery analysis</a>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box style2">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/img2project.jpg"
+                          alt=""
+                        />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p>IT Technology Solution</p>
+                          <h4>
+                            <a href="porfolio.html">Data Recovery analysis</a>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box style2">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/img3project.jpg"
+                          alt=""
+                        />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p>IT Technology Solution</p>
+                          <h4>
+                            <a href="porfolio.html">Data Recovery analysis</a>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box style2">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/img5project.jpg"
+                          alt=""
+                        />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p>IT Technology Solution</p>
+                          <h4>
+                            <a href="porfolio.html">Data Recovery analysis</a>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-box style2">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/img2project.jpg"
+                          alt=""
+                        />
+                        <div class="overlay-effect"></div>
+                      </div>
+                      <div class="hover-effect">
+                        <div class="content-box">
+                          <p>IT Technology Solution</p>
+                          <h4>
+                            <a href="porfolio.html">Data Recovery analysis</a>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-partner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div
+                class="swiper-container sl-partner item-parner animated-effect"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="image">
+                      <img src="assets/images/common/partner1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-team">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb39">
+                <p class="sub-title">Our Team</p>
+                <h2 class="title">We provide the Best IT solution services</h2>
+              </div>
+            </div>
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="swiper-container slider-team animated-effect">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="team-box style2 active">
+                      <div class="image">
+                        <img src="assets/images/common/team5.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Al Mahmud</a>
+                        </h5>
+                        <p class="desc">UI- Designer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="team-box style2">
+                      <div class="image">
+                        <img src="assets/images/common/team6.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Michelle monaghan</a>
+                        </h5>
+                        <p class="desc">Graphic Designer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="team-box style2">
+                      <div class="image">
+                        <img src="assets/images/common/team7.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Michelle Williams</a>
+                        </h5>
+                        <p class="desc">UI- Designer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="team-box style2">
+                      <div class="image">
+                        <img src="assets/images/common/team8.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <h5 class="name">
+                          <a href="team-details.html">Michael Jordan</a>
+                        </h5>
+                        <p class="desc">Software engineer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#" class="active"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-pricing">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb69">
+                <p class="sub-title">Pricing Plan</p>
+                <h2 class="title ml-20">We do the best offerfor Clients</h2>
+              </div>
+            </div>
+            <div class="col-md-4 tf-animated-fadeup">
+              <div class="pricing-box animated-effect">
+                <img
+                  src="assets/images/backgroup/bg-pricing.png"
+                  alt=""
+                  class="img-bg"
+                />
+                <div class="pricing-inner">
+                  <div class="icon icon-diskette-1"></div>
+                  <div class="title">
+                    <p>Basic Plan</p>
+                    <div class="divider"></div>
+                  </div>
+                  <div class="pricing">
+                    <div class="number">29</div>
+                    <p>/ Per Mo</p>
+                  </div>
+                  <ul class="list">
+                    <li>Powerful Admin Panel</li>
+                    <li>Advanced Custom Fileds</li>
+                    <li>Support via E-mail</li>
+                    <li>Planning Solution</li>
+                    <li>Enhanced Support</li>
+                  </ul>
+                  <a href="pricing.html" class="tf-button st2"
+                    ><span>Buy Now</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 tf-animated-fadeup">
+              <div class="pricing-box animated-effect">
+                <img
+                  src="assets/images/backgroup/bg-pricing.png"
+                  alt=""
+                  class="img-bg"
+                />
+                <div class="pricing-inner active">
+                  <div class="discount">
+                    <p>30%save</p>
+                  </div>
+                  <div class="icon icon-diskette-1"></div>
+                  <div class="title">
+                    <p>Standard Plan</p>
+                    <div class="divider"></div>
+                  </div>
+                  <div class="pricing">
+                    <div class="number">29</div>
+                    <p>/ Per Mo</p>
+                  </div>
+                  <ul class="list">
+                    <li>Powerful Admin Panel</li>
+                    <li>Advanced Custom Fileds</li>
+                    <li>Support via E-mail</li>
+                    <li>Planning Solution</li>
+                    <li>Enhanced Support</li>
+                  </ul>
+                  <a href="pricing.html" class="tf-button st2"
+                    ><span>Buy Now</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 tf-animated-fadeup">
+              <div class="pricing-box mb0 animated-effect">
+                <img
+                  src="assets/images/backgroup/bg-pricing.png"
+                  alt=""
+                  class="img-bg"
+                />
+                <div class="pricing-inner">
+                  <div class="icon icon-diskette-1"></div>
+                  <div class="title">
+                    <p>Premium Plan</p>
+                    <div class="divider"></div>
+                  </div>
+                  <div class="pricing">
+                    <div class="number">29</div>
+                    <p>/ Per Mo</p>
+                  </div>
+                  <ul class="list">
+                    <li>Powerful Admin Panel</li>
+                    <li>Advanced Custom Fileds</li>
+                    <li>Support via E-mail</li>
+                    <li>Planning Solution</li>
+                    <li>Enhanced Support</li>
+                  </ul>
+                  <a href="pricing.html" class="tf-button st2"
+                    ><span>Buy Now</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-testimonior">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-12 tf-animated-fadeup">
+              <div class="testimonior-content animated-effect">
+                <div class="title-section style2 mb29">
+                  <p class="sub-title">TESTIMONIAL</p>
+                  <h2 class="title white">Clients Feedback Examples You</h2>
+                </div>
+                <p class="txt-transform pr65">
+                  Pellentesque gravida lectus vitae nisi luctus, finibus aliquet
+                  ligula ultrices.
+                </p>
+                <div class="wrap-img mt40">
+                  <div class="swiper-container slider-testimonior-thum">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="assets/images/common/imgtestimonior1.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="assets/images/common/imgtestimonior2.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="assets/images/common/imgtestimonior3.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img
+                            src="assets/images/common/imgtestimonior4.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image style">
+                          <img
+                            src="assets/images/common/imgtestimonior5.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image style">
+                          <a href="#" class="nolink"
+                            ><i class="far fa-plus"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-xl-7 col-lg-6 col-md-12 tf-animated-fadeup position-relative"
+            >
+              <div class="swiper-container slider-testimonior animated-effect">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="testimonior-box">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/imgtestimonior6.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <p>
+                          Proin tortor mauris, consectetur sit amet faucibus
+                          mattis, pretium ac felis. Vestibulum
+                        </p>
+                        <h4>Al Mahmud</h4>
+                        <p class="desc">UI- Designer</p>
+                        <img
+                          class="quote"
+                          src="assets/images/common/quote.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonior-box">
+                      <div class="image">
+                        <img src="assets/images/post/post7.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <p>
+                          Proin tortor mauris, consectetur sit amet faucibus
+                          mattis, pretium ac felis. Vestibulum
+                        </p>
+                        <h4>Al Mahmud</h4>
+                        <p class="desc">UI- Designer</p>
+                        <img
+                          class="quote"
+                          src="assets/images/common/quote.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonior-box">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/imgtestimonior6.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <p>
+                          Proin tortor mauris, consectetur sit amet faucibus
+                          mattis, pretium ac felis. Vestibulum
+                        </p>
+                        <h4>Al Mahmud</h4>
+                        <p class="desc">UI- Designer</p>
+                        <img
+                          class="quote"
+                          src="assets/images/common/quote.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonior-box">
+                      <div class="image">
+                        <img src="assets/images/post/post7.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <p>
+                          Proin tortor mauris, consectetur sit amet faucibus
+                          mattis, pretium ac felis. Vestibulum
+                        </p>
+                        <h4>Al Mahmud</h4>
+                        <p class="desc">UI- Designer</p>
+                        <img
+                          class="quote"
+                          src="assets/images/common/quote.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonior-box">
+                      <div class="image">
+                        <img
+                          src="assets/images/common/imgtestimonior6.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <p>
+                          Proin tortor mauris, consectetur sit amet faucibus
+                          mattis, pretium ac felis. Vestibulum
+                        </p>
+                        <h4>Al Mahmud</h4>
+                        <p class="desc">UI- Designer</p>
+                        <img
+                          class="quote"
+                          src="assets/images/common/quote.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonior-box">
+                      <div class="image">
+                        <img src="assets/images/post/post7.jpg" alt="" />
+                      </div>
+                      <div class="content">
+                        <p>
+                          Proin tortor mauris, consectetur sit amet faucibus
+                          mattis, pretium ac felis. Vestibulum
+                        </p>
+                        <h4>Al Mahmud</h4>
+                        <p class="desc">UI- Designer</p>
+                        <img
+                          class="quote"
+                          src="assets/images/common/quote.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-absolute">
+                <svg
+                  width="58"
+                  height="46"
+                  viewBox="0 0 58 46"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M57.854 0.0619237C51.4982 36.1389 3.75201 40.4904 2.15014 41.047C1.94345 41.0976 1.99511 42.1602 2.2018 42.2108C17.3421 46.2587 56.9239 25.918 57.9574 0.264332C57.9574 0.213733 57.9056 -0.140472 57.854 0.0619237Z"
+                    fill="#00B0FC"
+                  />
+                  <path
+                    d="M11.7777 44.0562C8.36721 41.9311 4.18164 41.7287 0.254469 41.6781C0.254469 42.5889 0.306129 43.4997 0.306129 44.4104C5.68016 42.3359 8.16052 36.6688 8.93562 33.5317C9.03896 33.0763 9.09064 32.2667 8.93562 31.8113C8.88394 31.7101 8.67721 30.9511 8.57387 31.5077C7.59207 35.252 2.83812 40.5649 0.306129 41.7287C-0.158931 41.9311 -0.0555968 44.461 0.35779 44.461C4.28497 44.2586 7.90215 44.7646 11.7777 45.0176C11.9327 44.967 11.881 44.1068 11.7777 44.0562Z"
+                    fill="#00B0FC"
+                  />
+                </svg>
+              </div>
+              <div class="testimonior-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-blog">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="title-section pb25 mb68">
+                <p class="sub-title">Blog & News</p>
+                <h2 class="title">Our latest Blog & News</h2>
+              </div>
+            </div>
+            <div class="col-md-4 tf-animated-fadeup">
+              <div class="blog-post style2 animated-effect">
+                <div class="image">
+                  <img src="assets/images/post/post11.jpg" alt="" />
+                  <div class="date"><span>21, February, 2022</span></div>
+                </div>
+                <div class="content">
+                  <ul class="meta">
+                    <li><a href="blog-details.html">By Admin</a></li>
+                    <li><a href="blog-details.html">3 Comments</a></li>
+                  </ul>
+                  <h4 class="title">
+                    <a href="blog-details.html"
+                      >The IT Company for small businesses</a
+                    >
+                  </h4>
+                  <a href="blog-details.html" class="readmore">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 tf-animated-fadeup">
+              <div class="blog-post style2 animated-effect">
+                <div class="image">
+                  <img src="assets/images/post/post8.jpg" alt="" />
+                  <div class="date"><span>21, February, 2022</span></div>
+                </div>
+                <div class="content">
+                  <ul class="meta">
+                    <li><a href="blog-details.html">By Admin</a></li>
+                    <li><a href="blog-details.html">3 Comments</a></li>
+                  </ul>
+                  <h4 class="title">
+                    <a href="blog-details.html"
+                      >The IT Company for small businesses</a
+                    >
+                  </h4>
+                  <a href="blog-details.html" class="readmore active"
+                    >Learn More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 tf-animated-fadeup">
+              <div class="blog-post style2 animated-effect mobie-bt0">
+                <div class="image">
+                  <img src="assets/images/post/post12.jpg" alt="" />
+                  <div class="date"><span>21, February, 2022</span></div>
+                </div>
+                <div class="content">
+                  <ul class="meta">
+                    <li><a href="blog-details.html">By Admin</a></li>
+                    <li><a href="blog-details.html">3 Comments</a></li>
+                  </ul>
+                  <h4 class="title">
+                    <a href="blog-details.html"
+                      >The IT Company for small businesses</a
+                    >
+                  </h4>
+                  <a href="blog-details.html" class="readmore">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-inner">
+                  <h3>Solve your IT needs today!</h3>
+                  <a href="service.html" class="tf-button"
+                    ><span>Get Solutions</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="bg-overlay"></div>
+          <div class="bg-overlay2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="widget widget-logo">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="assets/images/logo/logo2.png" alt="" />
+                  </a>
+                </div>
+                <p class="desc">
+                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
+                  aliquet orci, in scelerisque nulla sem non justo.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="widget widget-service">
+                <h5 class="widget-title">Our Services</h5>
+                <ul class="widget-link">
+                  <li>
+                    <a href="about.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="service.html">Service</a>
+                  </li>
+                  <li>
+                    <a href="pricing.html">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="porfolio.html">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-infomation">
+                <h5 class="widget-title">Infomation</h5>
+                <ul class="infomation">
+                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li class="style">
+                    <ul>
+                      <li>Monal@gmail.com</li>
+                      <li>hotline@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li>+1 246-345-069</li>
+                </ul>
+              </div>
+              <div class="widget widget-subscribe">
+                <h5 class="widget-title">Subscribe</h5>
+                <p>
+                  Sign up for our latest news & articles. We won’t give you spam
+                  mails.
+                </p>
+                <form action="#" id="subscribe-form">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="mail"
+                    id="subscribe-email"
+                    required
+                  />
+                  <button type="submit" id="subscribe-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2075_4097)">
+                        <path
+                          d="M16.4453 20C16.5209 20 16.597 19.9857 16.6696 19.9553C16.8888 19.865 17.0312 19.6509 17.0312 19.4141V0.585919C17.0312 0.349044 16.8888 0.135021 16.6696 0.0446301C16.4499 -0.0463465 16.1987 0.00459099 16.031 0.171661L3.1404 13.1014C2.97275 13.269 2.9224 13.5208 3.01337 13.74C3.10376 13.9591 3.31779 14.1016 3.55466 14.1016H10.3433L16.031 19.8284C16.1432 19.9405 16.2931 20 16.4453 20Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2075_4097">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 20 0)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-12">
+                <div class="footer-bottom">
+                  <div class="wrap-fx">
+                    <div class="Copyright">
+                      <span
+                        >© 2022. <a href="#">monal</a> All rights
+                        reserved.</span
+                      >
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <a href="about.html">About</a>
+                      </li>
+                      <li>
+                        <a href="service.html">Service</a>
+                      </li>
+                      <li>
+                        <a href="faq.html">Faq</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a id="scroll-top"></a>
+    <script src="app/js/jquery.min.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/jquery.easing.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app/js/jquery.magnific-popup.min.js"></script>
+    <script src="app/js/swiper-bundle.min.js"></script>
+    <script src="app/js/swiper.js"></script>
+    <script src="app/js/animated.js"></script>
+    <script src="app/js/countto.js"></script>
+    <script src="app/js/plugin.js"></script>
+    <script src="app/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

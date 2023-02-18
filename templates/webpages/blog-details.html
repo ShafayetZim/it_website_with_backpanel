@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Shafayet Jamil Zim" content="author" />
+    <title>EKATTOR iT | Blog Details</title>
+    <link rel="stylesheet" href="{% static 'web/app/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/dist/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+  </head>
+  <body class="header-fixed inner-page blogdetail">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header_main" class="header">
+        <div class="container">
+          <div id="site-header-inner">
+            <div class="header__logo">
+              <a href="index.html"
+                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              /></a>
+            </div>
+
+            <!-- /#main-nav -->
+            <div class="header-right">
+              <div class="header-search flat-show-search" id="s1">
+                <nav id="main-nav" class="main-nav">
+                  <ul id="menu-primary-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="{% url 'home-page' %}">Home</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'about-page' %}">About</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'service-page' %}">Service</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'pricing-page' %}">Pricing</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                      <a href="{% url 'blog-page' %}">Blog</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'contact-page' %}">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mobile-button"><span></span></div>
+            <!-- /.mobile-button -->
+          </div>
+        </div>
+      </header>
+      <!-- end Header -->
+
+      <section class="page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="breadcrumbs">
+                <h1 class="heading">blog details</h1>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>blog details</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-post">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="wrap-fx">
+                <article class="article">
+                  <div class="post tf-animated-fadeup">
+                    <div class="image animated-effect">
+                      <img src="{% static 'web/assets/images/post/post5.jpg' %}" alt="" />
+                    </div>
+                    <div class="content">
+                      <a href="#" class="date">21, Feb, 2022</a>
+                      <ul class="meta-post">
+                        <li><a href="#">By Admin</a></li>
+                        <li><a href="#">3 Comments</a></li>
+                        <li><a href="#">1.56 Views</a></li>
+                      </ul>
+                      <h3 class="title">
+                        Our mission is to make your business better through
+                        technology
+                      </h3>
+                    </div>
+                    <div class="wrap-inner animated-effect">
+                      <p class="txt">
+                        Integer viverra sagittis lectus vitae rhoncus. Integer
+                        cursus est quis mauris pellentesque faucibus. Vestibulum
+                        ultrices mauris nisl, at rhoncus lectus bibendum at.
+                        Etiam porttitor ligula nec ex elementum, id lobortis
+                        libero dignissim. Donec elit quam,
+                      </p>
+                      <p class="txt mb0">
+                        cursus lacinia diam hendrerit, aliquam eleifend mi. Nunc
+                        feugiat finibus risus, nec venenatis enim congue at.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et
+                        ultrices posuere cubilia curae; Donec et lorem et sapien
+                        vestibulum cursus. Morbi imperdiet sapien et odio
+                        fermentum consectetur. Vestibulum imperdiet, nunc at
+                        hendrerit aliquet, libero ipsum finibus lectus, nec
+                        porttitor tellus est vel metus.
+                      </p>
+                      <h5 class="heading">We make technology work for you</h5>
+                      <div class="post-inner">
+                        <div class="img">
+                          <img src="{% static 'web/assets/images/post/post6.jpg' %}" alt="" />
+                        </div>
+                        <p class="desc">
+                          Aliquam ut magna non metus rhoncus tristique. Nam id
+                          felis nisl. Quisque auctor libero eleifend libero
+                          sodales pellentesque. Etiam lobortis augue enim, quis
+                          vehicula dolor elementum nec. Nam placerat dictum
+                          neque eget rutrum. Pellentesque habitant
+                        </p>
+                      </div>
+                      <div class="testimonior">
+                        <div class="img">
+                          <img src="{% static 'web/assets/images/post/quote.png' %}" alt="" />
+                        </div>
+                        <div>
+                          <p class="desc">
+                            Aliquam ut magna non metus rhoncus tristique. Nam id
+                            felis nisl. Quisque auctor libero eleifend libero
+                            sodales pellentesque. Etiam lobortis
+                          </p>
+                          <p class="name">Michele morrone</p>
+                        </div>
+                      </div>
+                      <p class="txt">
+                        Nullam efficitur justo mauris, a tincidunt erat accumsan
+                        ut. Quisque nec elementum ante. Sed in enim a diam
+                        tincidunt consectetur quis ac felis. Donec at sapien ut
+                        risus mollis imperdiet. In hac habitasse platea
+                        dictumst. Integer sagittis felis id tempus consectetur.
+                        Pellentesque sed leo ipsum. Praesent elementum ultricies
+                        hendrerit. Nunc massa velit, feugiat sed convallis vel,
+                        sagittis ac ligula.
+                      </p>
+                      <div class="wrap-widget">
+                        <div class="widget widget-tag style-2">
+                          <h6 class="title-widget">Releted Tags :</h6>
+                          <ul>
+                            <li><a href="#" class="active">Technology</a></li>
+                            <li><a href="#">Designing</a></li>
+                          </ul>
+                        </div>
+                        <div class="widget widget-social style-2">
+                          <h6 class="title-widget">Share:</h6>
+                          <ul>
+                            <li>
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="wrap-box-details">
+                        <div class="previous">
+                          <div class="img">
+                            <img
+                              src="{% static 'web/assets/images/post/imgslider1.jpg' %}"
+                              alt=""
+                            />
+                          </div>
+                          <div class="desc">
+                            <div class="job">Web Development</div>
+                            <a href="#">Previews</a>
+                          </div>
+                        </div>
+                        <div class="next">
+                          <div class="desc">
+                            <div class="job">Design Consulthing</div>
+                            <a href="#">Next</a>
+                          </div>
+                          <div class="img">
+                            <img
+                              src="{% static 'web/assets/images/post/imgslider2.jpg' %}"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="author-post">
+                        <div class="img">
+                          <img src="{% static 'web/assets/images/post/post7.jpg' %}" alt="" />
+                        </div>
+                        <div class="content-inner">
+                          <h5 class="name">Richard Rhys</h5>
+                          <p>
+                            Aliquam ut magna non metus rhoncus tristique. Nam id
+                            felis nisl. Quisque auctor libero eleifend libero
+                            sodales pellentesque.
+                          </p>
+                          <ul class="social">
+                            <li>
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comment-post animated-effect">
+                      <h4 class="title-comment">3 Comments</h4>
+                      <div id="comments" class="widget bg-white">
+                        <ol class="comment-list">
+                          <li class="comment">
+                            <article class="comment-wrap">
+                              <div class="gravatar">
+                                <img
+                                  alt="Image"
+                                  src="{% static 'web/assets/images/post/img1comment.jpg' %}"
+                                />
+                              </div>
+                              <div class="comment-content">
+                                <div class="wrap-fx">
+                                  <h5 class="comment-author">William Oscar</h5>
+                                  <p>20 March, 2022 at</p>
+                                </div>
+                                <div class="comment-text">
+                                  <p class="text">
+                                    Aliquam ut magna non metus rhoncus
+                                    tristique. Nam id felis nisl. Quisque auctor
+                                    libero eleifend libero
+                                  </p>
+                                </div>
+                                <div class="reply">
+                                  <a href="#">Reply......</a>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="comment-wrap">
+                              <div class="gravatar">
+                                <img
+                                  alt="Image"
+                                  src="{% static 'web/assets/images/post/img2comment.jpg' %}"
+                                />
+                              </div>
+                              <div class="comment-content">
+                                <div class="wrap-fx">
+                                  <h5 class="comment-author">Abigail Ava</h5>
+                                  <p>20 March, 2022 at</p>
+                                </div>
+                                <div class="comment-text">
+                                  <p class="text">
+                                    Aliquam ut magna non metus rhoncus
+                                    tristique. Nam id felis nisl. Quisque auctor
+                                    libero eleifend libero
+                                  </p>
+                                </div>
+                                <div class="reply">
+                                  <a href="#">Reply......</a>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="comment-wrap inner">
+                              <div class="gravatar">
+                                <img
+                                  alt="Image"
+                                  src="{% static 'web/assets/images/post/img3comment.jpg' %}"
+                                />
+                              </div>
+                              <div class="comment-content">
+                                <div class="wrap-fx">
+                                  <h5 class="comment-author">david koresh</h5>
+                                  <p>20 March, 2022 at</p>
+                                </div>
+                                <div class="comment-text">
+                                  <p class="text">
+                                    Aliquam ut magna non metus rhoncus
+                                    tristique. Nam id felis nisl. Quisque auctor
+                                    libero eleifend libero
+                                  </p>
+                                </div>
+                                <div class="reply">
+                                  <a href="#">Reply......</a>
+                                </div>
+                              </div>
+                            </article>
+                          </li>
+                        </ol>
+
+                        <div class="form-comment">
+                          <h4 class="heading">Add Comment</h4>
+                          <form
+                            action="contact/contact-process2.php"
+                            id="contactform"
+                            class="comment-form"
+                          >
+                            <fieldset class="name">
+                              <input
+                                type="text"
+                                id="name"
+                                placeholder="Full Name"
+                                class="tb-my-input"
+                                name="name"
+                                tabindex="2"
+                                value=""
+                                aria-required="true"
+                                required=""
+                              />
+                            </fieldset>
+                            <fieldset class="email">
+                              <input
+                                type="email"
+                                id="email"
+                                placeholder="Email address"
+                                class="tb-my-input"
+                                name="email"
+                                tabindex="2"
+                                value=""
+                                aria-required="true"
+                                required=""
+                              />
+                            </fieldset>
+                            <fieldset class="message">
+                              <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                placeholder="Comment"
+                                tabindex="4"
+                                aria-required="true"
+                                required=""
+                              ></textarea>
+                            </fieldset>
+                            <div class="btn-submit">
+                              <button
+                                id="comment-reply"
+                                name="submit"
+                                class="tf-button-submit"
+                                type="submit"
+                              >
+                                Post Comment
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <div id="sidebar" class="tf-animated-fadeup">
+                  <div class="widget widget-search">
+                    <h4 class="widget-title">Search</h4>
+                    <form action="#" class="widget-form">
+                      <input
+                        type="text"
+                        placeholder="Search......"
+                        required=""
+                      />
+                      <button><i class="icon-Vector"></i></button>
+                    </form>
+                  </div>
+                  <div class="widget widget-category">
+                    <h4 class="widget-title">Services Category</h4>
+                    <ul class="list-category">
+                      <li><a href="#">Software Development</a></li>
+                      <li><a href="#">Software Development</a></li>
+                      <li><a href="#">Gaming Development</a></li>
+                      <li><a href="#">UI-UX Designing</a></li>
+                      <li><a href="#">Content Management</a></li>
+                      <li><a href="#">Cyber Securety</a></li>
+                    </ul>
+                  </div>
+                  <div class="widget widget-recent-posts">
+                    <h4 class="widget-title">Recent Post</h4>
+                    <ul class="recent-posts">
+                      <li>
+                        <img src="{% static 'web/assets/images/post/thump1.jpg' %}" alt="" />
+                        <ul class="content">
+                          <li>
+                            <a href="blog-details.html"
+                              >Not just another Tech company</a
+                            >
+                          </li>
+                          <li class="meta-post">
+                            <a href="#">21, Feb, 2022</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="recent-posts">
+                      <li>
+                        <img src="{% static 'web/assets/images/post/thump2.jpg' %}" alt="" />
+                        <ul class="content">
+                          <li>
+                            <a href="blog-details.html"
+                              >Not just another Tech company</a
+                            >
+                          </li>
+                          <li class="meta-post">
+                            <a href="#">21, Feb, 2022</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="recent-posts">
+                      <li>
+                        <img src="{% static 'web/assets/images/post/thump3.jpg' %}" alt="" />
+                        <ul class="content">
+                          <li>
+                            <a href="blog-details.html"
+                              >Not just another Tech company</a
+                            >
+                          </li>
+                          <li class="meta-post">
+                            <a href="#">21, Feb, 2022</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-inner">
+                  <h3>Solve your IT needs today!</h3>
+                  <a href="service.html" class="tf-button"
+                    ><span>Get Solutions</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="bg-overlay"></div>
+          <div class="bg-overlay2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="widget widget-logo">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  </a>
+                </div>
+                <p class="desc">
+                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
+                  aliquet orci, in scelerisque nulla sem non justo.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="widget widget-service">
+                <h5 class="widget-title">Our Services</h5>
+                <ul class="widget-link">
+                  <li>
+                    <a href="{% url 'about-page' %}">About Us</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'service-page' %}">Service</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'pricing-page' %}">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'contact-page' %}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-infomation">
+                <h5 class="widget-title">Infomation</h5>
+                <ul class="infomation">
+                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li class="style">
+                    <ul>
+                      <li>Monal@gmail.com</li>
+                      <li>hotline@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li>+1 246-345-069</li>
+                </ul>
+              </div>
+              <div class="widget widget-subscribe">
+                <h5 class="widget-title">Subscribe</h5>
+                <p>
+                  Sign up for our latest news & articles. We won’t give you spam
+                  mails.
+                </p>
+                <form action="#" id="subscribe-form">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="email"
+                    id="subscribe-email"
+                    required
+                  />
+                  <button type="submit" id="subscribe-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2075_4097)">
+                        <path
+                          d="M16.4453 20C16.5209 20 16.597 19.9857 16.6696 19.9553C16.8888 19.865 17.0312 19.6509 17.0312 19.4141V0.585919C17.0312 0.349044 16.8888 0.135021 16.6696 0.0446301C16.4499 -0.0463465 16.1987 0.00459099 16.031 0.171661L3.1404 13.1014C2.97275 13.269 2.9224 13.5208 3.01337 13.74C3.10376 13.9591 3.31779 14.1016 3.55466 14.1016H10.3433L16.031 19.8284C16.1432 19.9405 16.2931 20 16.4453 20Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2075_4097">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 20 0)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-12">
+                <div class="footer-bottom">
+                  <div class="wrap-fx">
+                    <div class="Copyright">
+                      <span
+                        >© 2023. <a href="https://www.ekattorit.com">
+                        <span style="color:green"><b>EKATTOR</b></span>
+                        <span style="color:red"><b>iT</b></span>
+                      </a> All rights
+                        reserved.</span
+                      >
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'about-page' %}">About</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'service-page' %}">Service</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'pricing-page' %}">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a id="scroll-top"></a>
+    <script src="{% static 'web/app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'web/app/js/app.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery.easing.js' %}"></script>
+    <script src="{% static 'web/app/js/animated.js' %}"></script>
+    <script src="{% static 'web/app/js/plugin.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery-validate.js' %}"></script>
+  </body>
+</html>

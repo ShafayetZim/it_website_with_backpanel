@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Shafayet Jamil Zim" content="author" />
+    <title>EKATTOR iT | Contact</title>
+    <link rel="stylesheet" href="{% static 'web/app/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/dist/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+  </head>
+  <body class="header-fixed inner-page pg-contact">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header_main" class="header">
+        <div class="container">
+          <div id="site-header-inner">
+            <div class="header__logo">
+              <a href="index.html"
+                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              /></a>
+            </div>
+
+            <!-- /#main-nav -->
+            <div class="header-right">
+              <div class="header-search flat-show-search" id="s1">
+                <nav id="main-nav" class="main-nav">
+                  <ul id="menu-primary-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="{% url 'home-page' %}">Home</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'about-page' %}">About</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'service-page' %}">Service</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'pricing-page' %}">Pricing</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'blog-page' %}">Blog</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                      <a href="{% url 'contact-page' %}">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mobile-button"><span></span></div>
+            <!-- /.mobile-button -->
+          </div>
+        </div>
+      </header>
+      <!-- end Header -->
+
+      <section class="page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="breadcrumbs">
+                <h1 class="heading">Contact Us</h1>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-contact mobie-pb0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="contact-flex tf-animated-fadeup">
+                <div class="box-left">
+                  {% for item in contact %}
+                  <div class="title-section style2 mb29">
+                    <p class="sub-title">Contact Us</p>
+                    <h2 class="title txt-transform">
+                      {{item.title}}
+                    </h2>
+                  </div>
+                  <p class="txt-transform animated-effect">
+                    {{item.info}}
+                  </p>
+                  {% endfor %}
+                </div>
+                <div class="box-right">
+                  <div class="icon-box animated-effect">
+                    <div class="icon">
+                      <span class="icon-phone-1-1"></span>
+                    </div>
+                    <div class="content">
+                      <h6>Phone Number</h6>
+                      <ul>
+                        {% for item in phone %}
+                        <li><span>{{item.number}}</span></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="iconstyle">
+                      <span class="icon-phone-1-1"></span>
+                    </div>
+                  </div>
+                  <div class="icon-box animated-effect">
+                    <div class="icon">
+                      <span class="icon-email-10-1"></span>
+                    </div>
+                    <div class="content">
+                      <h6>Email address</h6>
+                      <ul>
+                        {% for item in email %}
+                        <li><span>{{item.mail}}</span></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="iconstyle">
+                      <span class="icon-email-10-1"></span>
+                    </div>
+                  </div>
+                  <div class="icon-box mobie-bt0 animated-effect">
+                    <div class="icon">
+                      <span class="icon-meeting-point-1"></span>
+                    </div>
+                    <div class="content">
+                      <h6>Office address</h6>
+                      <ul>
+                        {% for item in office %}
+                        <li><span>{{item.address}}</span></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="iconstyle">
+                      <span class="icon-meeting-point-1"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-contact2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="contact-flex animated-effect">
+                <div class="box-left">
+                  <div class="title-section style2 mb29">
+                    <p class="sub-title">Contact Us</p>
+                    <h2 class="title txt-transform">
+                      Need your any help send massage
+                    </h2>
+                  </div>
+                  <p class="txt-transform">
+                    Aliquam ut magna non metus rhoncus tristique. Nam id felis
+                    nisl. Quisque auctor libero eleifend libero
+                  </p>
+                </div>
+                <div class="box-right">
+                  <form
+                    action="contact/contact-process.php"
+                    class="contact-form contact-style1"
+                    id="contactform"
+                  >
+                    <div class="wrap-fx">
+                      <fieldset>
+                        <input
+                          type="text"
+                          placeholder="Full Name"
+                          name="name"
+                          id="name"
+                        />
+                      </fieldset>
+                      <fieldset>
+                        <input
+                          type="email"
+                          placeholder="Email Address"
+                          name="email"
+                          id="email"
+                        />
+                      </fieldset>
+                      <fieldset>
+                        <input
+                          type="tel"
+                          placeholder="Phone :"
+                          name="tel"
+                          id="tel"
+                        />
+                      </fieldset>
+                      <fieldset>
+                        <select name="subject" id="subject" required="">
+                          <option value="">Subject</option>
+                          <option value="Subject 01">Subject 01</option>
+                          <option value="Subject 02">Subject 02</option>
+                        </select>
+                      </fieldset>
+                      <fieldset class="massage">
+                        <textarea
+                          placeholder="Massage"
+                          rows="5"
+                          tabindex="4"
+                          name="message"
+                          class="message"
+                          id="message"
+                        ></textarea>
+                      </fieldset>
+                      <button type="submit" class="tf-button">
+                        <span>Send Massage</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section map">
+        <div class="flat-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.719371053296!2d90.42326181429775!3d23.793005493065767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70f25f178fd%3A0x22726cf916252c05!2sEKATTOR%20iT!5e0!3m2!1sen!2sbd!4v1675327500541!5m2!1sen!2sbd"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-inner">
+                  <h3>Solve your IT needs today!</h3>
+                  <a href="service.html" class="tf-button"
+                    ><span>Get Solutions</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="bg-overlay"></div>
+          <div class="bg-overlay2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="widget widget-logo">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  </a>
+                </div>
+                <p class="desc">
+                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
+                  aliquet orci, in scelerisque nulla sem non justo.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="widget widget-service">
+                <h5 class="widget-title">Our Services</h5>
+                <ul class="widget-link">
+                  <li>
+                    <a href="{% url 'about-page' %}">About Us</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'service-page' %}">Service</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'pricing-page' %}">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'contact-page' %}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-infomation">
+                <h5 class="widget-title">Infomation</h5>
+                <ul class="infomation">
+                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li class="style">
+                    <ul>
+                      <li>Monal@gmail.com</li>
+                      <li>hotline@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li>+1 246-345-069</li>
+                </ul>
+              </div>
+              <div class="widget widget-subscribe">
+                <h5 class="widget-title">Subscribe</h5>
+                <p>
+                  Sign up for our latest news & articles. We won’t give you spam
+                  mails.
+                </p>
+                <form action="#" id="subscribe-form">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="email"
+                    id="subscribe-email"
+                    required
+                  />
+                  <button type="submit" id="subscribe-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2075_4097)">
+                        <path
+                          d="M16.4453 20C16.5209 20 16.597 19.9857 16.6696 19.9553C16.8888 19.865 17.0312 19.6509 17.0312 19.4141V0.585919C17.0312 0.349044 16.8888 0.135021 16.6696 0.0446301C16.4499 -0.0463465 16.1987 0.00459099 16.031 0.171661L3.1404 13.1014C2.97275 13.269 2.9224 13.5208 3.01337 13.74C3.10376 13.9591 3.31779 14.1016 3.55466 14.1016H10.3433L16.031 19.8284C16.1432 19.9405 16.2931 20 16.4453 20Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2075_4097">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 20 0)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-12">
+                <div class="footer-bottom">
+                  <div class="wrap-fx">
+                    <div class="Copyright">
+                      <span
+                        >© 2023. <a href="https://www.ekattorit.com">
+                        <span style="color:green"><b>EKATTOR</b></span>
+                        <span style="color:red"><b>iT</b></span>
+                      </a> All rights
+                        reserved.</span
+                      >
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'about-page' %}">About</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'service-page' %}">Service</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'pricing-page' %}">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a id="scroll-top"></a>
+    <script src="{% static 'web/app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'web/app/js/app.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery.easing.js' %}"></script>
+    <script src="{% static 'web/app/js/animated.js' %}"></script>
+    <script src="{% static 'web/app/js/plugin.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery-validate.js' %}"></script>
+  </body>
+</html>

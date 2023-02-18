@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Shafayet Jamil Zim" content="author" />
+    <title>EKATTOR iT | Blog</title>
+    <link rel="stylesheet" href="{% static 'web/app/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/app/dist/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+  </head>
+  <body class="header-fixed inner-page">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header_main" class="header">
+        <div class="container">
+          <div id="site-header-inner">
+            <div class="header__logo">
+              <a href="index.html"
+                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              /></a>
+            </div>
+
+            <!-- /#main-nav -->
+            <div class="header-right">
+              <div class="header-search flat-show-search" id="s1">
+                <nav id="main-nav" class="main-nav">
+                  <ul id="menu-primary-menu" class="menu">
+                    <li class="menu-item">
+                      <a href="{% url 'home-page' %}">Home</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'about-page' %}html">About</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'service-page' %}">Service</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'pricing-page' %}">Pricing</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                      <a href="{% url 'blog-page' %}">Blog</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="{% url 'contact-page' %}">contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mobile-button"><span></span></div>
+            <!-- /.mobile-button -->
+          </div>
+        </div>
+      </header>
+      <!-- end Header -->
+
+      <section class="page-title">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 tf-animated-fadeup">
+              <div class="breadcrumbs">
+                <h1 class="heading">blog standard</h1>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>blog standard</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tf-section tf-post">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="wrap-fx">
+                <article class="article">
+                  <div class="post tf-animated-fadeup">
+                    <div class="image animated-effect">
+                      <img src="{% static 'web/assets/images/post/post1.jpg' %}" alt="" />
+                    </div>
+                    <div class="content">
+                      <a href="blog-details.html" class="date">21, Feb, 2022</a>
+                      <ul class="meta-post">
+                        <li><a href="blog-details.html">By Admin</a></li>
+                        <li><a href="blog-details.html">3 Comments</a></li>
+                        <li><a href="blog-details.html">1.56 Views</a></li>
+                      </ul>
+                      <h3 class="title">
+                        <a href="blog-details.html"
+                          >The IT Company for small businesses</a
+                        >
+                      </h3>
+                      <p>
+                        Proin cursus ex a vestibulum mattis. Vivamus in mauris
+                        dignissim, imperdiet risus ac, congue nunc. Nullam
+                        feugiat
+                      </p>
+                      <a href="blog-details.html" class="read-more"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                  <div class="post tf-animated-fadeup">
+                    <div class="image">
+                      <div class="overlay"></div>
+                      <img src="{% static 'web/assets/images/post/post2.jpg' %}" alt="" />
+                      <a
+                        href="https://www.youtube.com/watch?v=7vQznLKEfBs"
+                        class="popup-youtube"
+                        ><div class="play"><i class="fas fa-play"></i></div>
+                      </a>
+                    </div>
+                    <div class="content">
+                      <a href="blog-details.html" class="date">21, Feb, 2022</a>
+                      <ul class="meta-post">
+                        <li><a href="blog-details.html">By Admin</a></li>
+                        <li><a href="blog-details.html">3 Comments</a></li>
+                        <li><a href="blog-details.html">1.56 Views</a></li>
+                      </ul>
+                      <h3 class="title">
+                        <a href="blog-details.html"
+                          >We are a pioneer in computer technology</a
+                        >
+                      </h3>
+                      <p>
+                        Proin cursus ex a vestibulum mattis. Vivamus in mauris
+                        dignissim, imperdiet risus ac, congue nunc. Nullam
+                        feugiat
+                      </p>
+                      <a href="blog-details.html" class="read-more"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="post tf-animated-fadeup">
+                    <div class="image">
+                      <div class="swiper-container sl-post">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="{% static 'web/assets/images/post/post3.jpg' %}" alt="" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="{% static 'web/assets/images/post/post1.jpg' %}" alt="" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="{% static 'web/assets/images/post/post2.jpg' %}" alt="" />
+                          </div>
+                        </div>
+                        <div class="btn-next-post">
+                          <i class="far fa-chevron-right"></i>
+                        </div>
+                        <div class="btn-prev-post">
+                          <i class="far fa-chevron-left"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <a href="blog-details.html" class="date">21, Feb, 2022</a>
+                      <ul class="meta-post">
+                        <li><a href="blog-details.html">By Admin</a></li>
+                        <li><a href="blog-details.html">3 Comments</a></li>
+                        <li><a href="blog-details.html">1.56 Views</a></li>
+                      </ul>
+                      <h3 class="title">
+                        <a href="blog-details.html"
+                          >Where innovation meets the real world</a
+                        >
+                      </h3>
+                      <p>
+                        Proin cursus ex a vestibulum mattis. Vivamus in mauris
+                        dignissim, imperdiet risus ac, congue nunc. Nullam
+                        feugiat
+                      </p>
+                      <a href="blog-details.html" class="read-more"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="post style tf-animated-fadeup">
+                    <div class="image">
+                      <div class="overlay"></div>
+                      <img src="{% static 'web/assets/images/post/post4.jpg' %}" alt="" />
+                    </div>
+                    <div class="content">
+                      <a href="blog-details.html" class="date">21, Feb, 2022</a>
+                      <ul class="meta-post">
+                        <li><a href="blog-details.html">By Admin</a></li>
+                        <li><a href="blog-details.html">3 Comments</a></li>
+                        <li><a href="blog-details.html">1.56 Views</a></li>
+                      </ul>
+                      <h3 class="title">
+                        <a href="blog-details.html"
+                          >Delivering IT solutions that enable you to work
+                          smarter</a
+                        >
+                      </h3>
+                      <a href="blog-details.html" class="read-more"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                  <div class="themesflat-pagination m-t51 tf-animated-fadeup">
+                    <ul class="animated-effect">
+                      <li><a href="#" class="active">01</a></li>
+                      <li><a href="#">02</a></li>
+                      <li><a href="#">03</a></li>
+                      <li><a href="#">04</a></li>
+                      <li class="st">.</li>
+                      <li class="st">.</li>
+                      <li class="st">.</li>
+                      <li><a href="#">05</a></li>
+                    </ul>
+                  </div>
+                </article>
+                <div id="sidebar" class="tf-animated-fadeup">
+                  <div class="widget widget-search">
+                    <h4 class="widget-title">Search</h4>
+                    <form action="#" class="widget-form">
+                      <input
+                        type="text"
+                        placeholder="Search......"
+                        required=""
+                      />
+                      <button><i class="icon-Vector"></i></button>
+                    </form>
+                  </div>
+                  <div class="widget widget-category">
+                    <h4 class="widget-title">Services Category</h4>
+                    <ul class="list-category">
+                      <li><a href="#">Software Development</a></li>
+                      <li><a href="#">Software Development</a></li>
+                      <li><a href="#">Gaming Development</a></li>
+                      <li><a href="#">UI-UX Designing</a></li>
+                      <li><a href="#">Content Management</a></li>
+                      <li><a href="#">Cyber Securety</a></li>
+                    </ul>
+                  </div>
+                  <div class="widget widget-recent-posts">
+                    <h4 class="widget-title">Recent Post</h4>
+                    <ul class="recent-posts">
+                      <li>
+                        <img src="{% static 'web/assets/images/post/thump1.jpg' %}" alt="" />
+                        <ul class="content">
+                          <li>
+                            <a href="blog-details.html"
+                              >Not just another Tech company</a
+                            >
+                          </li>
+                          <li class="meta-post">
+                            <a href="blog-details.html">21, Feb, 2022</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="recent-posts">
+                      <li>
+                        <img src="{% static 'web/assets/images/post/thump2.jpg' %}" alt="" />
+                        <ul class="content">
+                          <li>
+                            <a href="blog-details.html"
+                              >Not just another Tech company</a
+                            >
+                          </li>
+                          <li class="meta-post">
+                            <a href="blog-details.html">21, Feb, 2022</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="recent-posts">
+                      <li>
+                        <img src="{% static 'web/assets/images/post/thump3.jpg' %}" alt="" />
+                        <ul class="content">
+                          <li>
+                            <a href="blog-details.html"
+                              >Not just another Tech company</a
+                            >
+                          </li>
+                          <li class="meta-post">
+                            <a href="blog-details.html">21, Feb, 2022</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-inner">
+                  <h3>Solve your IT needs today!</h3>
+                  <a href="service.html" class="tf-button"
+                    ><span>Get Solutions</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+          <div class="bg-overlay"></div>
+          <div class="bg-overlay2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="widget widget-logo">
+                <div class="footer__logo">
+                  <a href="index.html">
+                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  </a>
+                </div>
+                <p class="desc">
+                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
+                  aliquet orci, in scelerisque nulla sem non justo.
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="widget widget-service">
+                <h5 class="widget-title">Our Services</h5>
+                <ul class="widget-link">
+                  <li>
+                    <a href="{% url 'about-page' %}">About Us</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'service-page' %}">Service</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'pricing-page' %}">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'contact-page' %}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget-infomation">
+                <h5 class="widget-title">Infomation</h5>
+                <ul class="infomation">
+                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li class="style">
+                    <ul>
+                      <li>Monal@gmail.com</li>
+                      <li>hotline@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li>+1 246-345-069</li>
+                </ul>
+              </div>
+              <div class="widget widget-subscribe">
+                <h5 class="widget-title">Subscribe</h5>
+                <p>
+                  Sign up for our latest news & articles. We won’t give you spam
+                  mails.
+                </p>
+                <form action="#" id="subscribe-form">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="email"
+                    id="subscribe-email"
+                    required
+                  />
+                  <button type="submit" id="subscribe-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2075_4097)">
+                        <path
+                          d="M16.4453 20C16.5209 20 16.597 19.9857 16.6696 19.9553C16.8888 19.865 17.0312 19.6509 17.0312 19.4141V0.585919C17.0312 0.349044 16.8888 0.135021 16.6696 0.0446301C16.4499 -0.0463465 16.1987 0.00459099 16.031 0.171661L3.1404 13.1014C2.97275 13.269 2.9224 13.5208 3.01337 13.74C3.10376 13.9591 3.31779 14.1016 3.55466 14.1016H10.3433L16.031 19.8284C16.1432 19.9405 16.2931 20 16.4453 20Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2075_4097">
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 20 0)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-12">
+                <div class="footer-bottom">
+                  <div class="wrap-fx">
+                    <div class="Copyright">
+                      <span
+                        >© 2023. <a href="https://www.ekattorit.com">
+                        <span style="color:green"><b>EKATTOR</b></span>
+                        <span style="color:red"><b>iT</b></span>
+                      </a> All rights
+                        reserved.</span
+                      >
+                    </div>
+                    <ul class="list">
+                      <li>
+                        <a href="{% url 'about-page' %}">About</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'service-page' %}">Service</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'pricing-page' %}">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a id="scroll-top"></a>
+    <script src="{% static 'web/app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'web/app/js/app.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery.easing.js' %}"></script>
+    <script src="{% static 'web/app/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'web/app/js/animated.js' %}"></script>
+    <script src="{% static 'web/app/js/plugin.js' %}"></script>
+    <script src="{% static 'web/app/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/app/js/swiper.js' %}"></script>
+  </body>
+</html>
