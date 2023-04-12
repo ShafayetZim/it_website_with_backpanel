@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
-    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="shortcut icon" href="{% static 'web/assets/images/71/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/71/favicon.png' %}" />
   </head>
   <body class="header-fixed inner-page blogdetail">
     <div id="wrapper">
@@ -24,8 +24,8 @@
         <div class="container">
           <div id="site-header-inner">
             <div class="header__logo">
-              <a href="index.html"
-                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              <a href="{% url 'home-page' %}"
+                ><img src="{% static 'web/assets/images/71/logo1.png' %}" alt=""
               /></a>
             </div>
 
@@ -74,7 +74,7 @@
               <div class="breadcrumbs">
                 <h1 class="heading">blog details</h1>
                 <ul>
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="{% url 'home-page' %}">Home</a></li>
                   <li>blog details</li>
                 </ul>
               </div>
@@ -400,7 +400,7 @@
                       <li><a href="#">Gaming Development</a></li>
                       <li><a href="#">UI-UX Designing</a></li>
                       <li><a href="#">Content Management</a></li>
-                      <li><a href="#">Cyber Securety</a></li>
+                      <li><a href="#">Cyber Security</a></li>
                     </ul>
                   </div>
                   <div class="widget widget-recent-posts">
@@ -410,7 +410,7 @@
                         <img src="{% static 'web/assets/images/post/thump1.jpg' %}" alt="" />
                         <ul class="content">
                           <li>
-                            <a href="blog-details.html"
+                            <a href="{% url 'blog-detail-page' %}"
                               >Not just another Tech company</a
                             >
                           </li>
@@ -425,7 +425,7 @@
                         <img src="{% static 'web/assets/images/post/thump2.jpg' %}" alt="" />
                         <ul class="content">
                           <li>
-                            <a href="blog-details.html"
+                            <a href="{% url 'blog-detail-page' %}"
                               >Not just another Tech company</a
                             >
                           </li>
@@ -440,7 +440,7 @@
                         <img src="{% static 'web/assets/images/post/thump3.jpg' %}" alt="" />
                         <ul class="content">
                           <li>
-                            <a href="blog-details.html"
+                            <a href="{% url 'blog-detail-page' %}"
                               >Not just another Tech company</a
                             >
                           </li>
@@ -465,7 +465,7 @@
               <div class="col-md-12">
                 <div class="footer-inner">
                   <h3>Solve your IT needs today!</h3>
-                  <a href="service.html" class="tf-button"
+                  <a href="{% url 'service-page' %}" class="tf-button"
                     ><span>Get Solutions</span></a
                   >
                 </div>
@@ -480,13 +480,14 @@
             <div class="row">
               <div class="widget widget-logo">
                 <div class="footer__logo">
-                  <a href="index.html">
-                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  <a href="{% url 'home-page' %}">
+                    <img src="{% static 'web/assets/images/71/logo1.png' %}" alt="" />
                   </a>
                 </div>
                 <p class="desc">
-                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
-                  aliquet orci, in scelerisque nulla sem non justo.
+                  "EKATTOR iT" is a flourishing Software Company in Bangladesh.
+                  We are exclusively focusing in High Quality and Cost-effective
+                  Software Design development and implementation of services.
                 </p>
                 <ul class="social">
                   <li>
@@ -533,16 +534,16 @@
                 </ul>
               </div>
               <div class="widget widget-infomation">
-                <h5 class="widget-title">Infomation</h5>
+                <h5 class="widget-title">Information</h5>
                 <ul class="infomation">
-                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li>Ga-27/2 A, Shahjadpur Gulshan, Dhaka-1212</li>
                   <li class="style">
                     <ul>
-                      <li>Monal@gmail.com</li>
-                      <li>hotline@gmail.com</li>
+                      <li>info@ekattorit.com</li>
+                      <li>support@ekattorit.com</li>
                     </ul>
                   </li>
-                  <li>+1 246-345-069</li>
+                  <li>+88 02-8899608</li>
                 </ul>
               </div>
               <div class="widget widget-subscribe">
