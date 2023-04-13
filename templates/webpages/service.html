@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
-    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="shortcut icon" href="{% static 'web/assets/images/71/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/71/favicon.png' %}" />
   </head>
   <body class="header-fixed inner-page service">
     <div id="wrapper">
@@ -24,8 +24,8 @@
         <div class="container">
           <div id="site-header-inner">
             <div class="header__logo">
-              <a href="index.html"
-                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              <a href="{% url 'home-page' %}"
+                ><img src="{% static 'web/assets/images/71/logo1.png' %}" alt=""
               /></a>
             </div>
 
@@ -74,7 +74,7 @@
               <div class="breadcrumbs">
                 <h1 class="heading">Services</h1>
                 <ul>
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="{% url 'home-page' %}">Home</a></li>
                   <li>Services</li>
                 </ul>
               </div>
@@ -103,12 +103,12 @@
                         <span class="icon-web-development-1"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">Website Development</a>
+                        <a href="{% url 'service-detail-page' %}">Website Development</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -119,12 +119,12 @@
                         <span class="icon-Group"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">Software Development</a>
+                        <a href="{% url 'service-detail-page' %}">Software Development</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -135,12 +135,12 @@
                         <span class="icon-Group2"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">Games Development</a>
+                        <a href="{% url 'service-detail-page' %}">Games Development</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -151,12 +151,12 @@
                         <span class="icon-ux-interface"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">UI-UX Designing</a>
+                        <a href="{% url 'service-detail-page' %}">UI-UX Designing</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -169,12 +169,12 @@
                         <span class="icon-web-development-1"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">Website Development</a>
+                        <a href="{% url 'service-detail-page' %}">Website Development</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -185,12 +185,12 @@
                         <span class="icon-Group"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">Software Development</a>
+                        <a href="{% url 'service-detail-page' %}">Software Development</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -201,12 +201,12 @@
                         <span class="icon-Group2"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">Games Development</a>
+                        <a href="{% url 'service-detail-page' %}">Games Development</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -217,12 +217,12 @@
                         <span class="icon-ux-interface"></span>
                       </div>
                       <h5 class="title">
-                        <a href="service-details.html">UI-UX Designing</a>
+                        <a href="{% url 'service-detail-page' %}">UI-UX Designing</a>
                       </h5>
                       <p>
                         Integer venenatis, orci eget sodales aliquet, tortor sem
                       </p>
-                      <a href="service-details.html" class="readmore"
+                      <a href="{% url 'service-detail-page' %}" class="readmore"
                         ><span>Learn More</span></a
                       >
                     </div>
@@ -535,7 +535,7 @@
               <div class="col-md-12">
                 <div class="footer-inner">
                   <h3>Solve your IT needs today!</h3>
-                  <a href="service.html" class="tf-button"
+                  <a href="{% url 'service-page' %}" class="tf-button"
                     ><span>Get Solutions</span></a
                   >
                 </div>
@@ -550,13 +550,14 @@
             <div class="row">
               <div class="widget widget-logo">
                 <div class="footer__logo">
-                  <a href="index.html">
-                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  <a href="{% url 'home-page' %}">
+                    <img src="{% static 'web/assets/images/71/logo1.png' %}" alt="" />
                   </a>
                 </div>
                 <p class="desc">
-                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
-                  aliquet orci, in scelerisque nulla sem non justo.
+                  "EKATTOR iT" is a flourishing Software Company in Bangladesh.
+                  We are exclusively focusing in High Quality and Cost-effective
+                  Software Design development and implementation of services.
                 </p>
                 <ul class="social">
                   <li>
@@ -603,16 +604,16 @@
                 </ul>
               </div>
               <div class="widget widget-infomation">
-                <h5 class="widget-title">Infomation</h5>
+                <h5 class="widget-title">Information</h5>
                 <ul class="infomation">
-                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li>Ga 27/2 A, Shahjadpur Gulshan, Dhaka-1212</li>
                   <li class="style">
                     <ul>
-                      <li>Monal@gmail.com</li>
-                      <li>hotline@gmail.com</li>
+                      <li>info@ekattorit.com</li>
+                      <li>support@ekattorit.com</li>
                     </ul>
                   </li>
-                  <li>+1 246-345-069</li>
+                  <li>+88 02-8899608</li>
                 </ul>
               </div>
               <div class="widget widget-subscribe">
