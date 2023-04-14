@@ -11,4 +11,5 @@ urlpatterns = [
     path('all_user', views.user_list, name="all-users"),
     path('user_delete/<int:id>', views.user_delete, name="user-delete"),
     path('update_user/<int:pk>', views.UserUpdateView.as_view(), name='update_user'),
+    path('users/<int:user_id>/permissions/', views.user_permissions, name='user_permissions'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
