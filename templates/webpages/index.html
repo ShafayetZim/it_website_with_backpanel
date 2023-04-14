@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="{% static 'web/assets/font/font-awesome.css' %}" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{% static 'web/assets/images/favicon.png' %}" />
-    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/favicon.png' %}" />
+    <link rel="shortcut icon" href="{% static 'web/assets/images/71/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'web/assets/images/71/favicon.png' %}" />
     <link rel="stylesheet" href="{% static 'web/assets/style.css' %}" />
   </head>
   <body class="header-fixed main home1 counter-scroll btn-effect1">
@@ -24,8 +24,8 @@
         <div class="container">
           <div id="site-header-inner">
             <div class="header__logo">
-              <a href="index.html"
-                ><img src="{% static 'web/assets/images/logo/logo.png' %}" alt=""
+              <a href="{% url 'home-page' %}"
+                ><img src="{% static 'web/assets/images/71/logo1.png' %}" alt=""
               /></a>
             </div>
 
@@ -82,7 +82,7 @@
                           Sed consequat
                         </p>
                         <div class="btn-slider">
-                          <a class="tf-button" href="service.html">
+                          <a class="tf-button" href="{% url 'service-detail-page' %}">
                             <span>View services</span>
                           </a>
                         </div>
@@ -107,7 +107,7 @@
                           Sed consequat
                         </p>
                         <div class="btn-slider">
-                          <a class="tf-button" href="service.html">
+                          <a class="tf-button" href="{% url 'service-detail-page' %}">
                             <span>View services</span>
                           </a>
                         </div>
@@ -132,7 +132,7 @@
                           Sed consequat
                         </p>
                         <div class="btn-slider">
-                          <a class="tf-button" href="service.html">
+                          <a class="tf-button" href="{% url 'service-detail-page' %}">
                             <span>View services</span>
                           </a>
                         </div>
@@ -171,10 +171,10 @@
                   <span class="icon-Page-1_50"></span>
                 </div>
                 <h5 class="title">
-                  <a href="service-details.html">Data Recovery Analysis</a>
+                  <a href="{% url 'service-detail-page' %}">Data Recovery Analysis</a>
                 </h5>
                 <p>Aenean eleifend ultricies viverra Quisque</p>
-                <a href="service-details.html" class="readmore"
+                <a href="{% url 'service-detail-page' %}" class="readmore"
                   ><span>Read More</span></a
                 >
               </div>
@@ -186,10 +186,10 @@
                   <span class="icon-coding"></span>
                 </div>
                 <h5 class="title">
-                  <a href="service-details.html">Website Develoment</a>
+                  <a href="{% url 'service-detail-page' %}">Website Develoment</a>
                 </h5>
                 <p>Aenean eleifend ultricies viverra Quisque</p>
-                <a href="service-details.html" class="readmore"
+                <a href="{% url 'service-detail-page' %}" class="readmore"
                   ><span>Read More</span></a
                 >
               </div>
@@ -201,10 +201,10 @@
                   <span class="icon-app"></span>
                 </div>
                 <h5 class="title">
-                  <a href="service-details.html">Mobile app Developemnt</a>
+                  <a href="{% url 'service-detail-page' %}">Mobile app Developemnt</a>
                 </h5>
                 <p>Aenean eleifend ultricies viverra Quisque</p>
-                <a href="service-details.html" class="readmore"
+                <a href="{% url 'service-detail-page' %}" class="readmore"
                   ><span>Read More</span></a
                 >
               </div>
@@ -216,10 +216,10 @@
                   <span class="icon-cloud"></span>
                 </div>
                 <h5 class="title">
-                  <a href="service-details.html">Mobile app Developemnt</a>
+                  <a href="{% url 'service-detail-page' %}">Mobile app Developemnt</a>
                 </h5>
                 <p>Aenean eleifend ultricies viverra Quisque</p>
-                <a href="service-details.html" class="readmore"
+                <a href="{% url 'service-detail-page' %}" class="readmore"
                   ><span>Read More</span></a
                 >
               </div>
@@ -281,7 +281,7 @@
                       <img src="{% static 'web/assets/images/common/icon1.png' %}" alt="" />
                     </div>
                     <div class="desc">
-                      <a href="about.html">Technical consultant</a>
+                      <a href="{% url 'about-page' %}">Technical consultant</a>
                     </div>
                   </div>
                   <div class="icon-box st2">
@@ -289,12 +289,12 @@
                       <img src="{% static 'web/assets/images/common/icon2.png' %}" alt="" />
                     </div>
                     <div class="desc">
-                      <a href="about.html">Technology Specialist</a>
+                      <a href="{% url 'about-page' %}">Technology Specialist</a>
                     </div>
                   </div>
                 </div>
                 <div class="wrap">
-                  <a href="about.html" class="tf-button"
+                  <a href="{% url 'about-page' %}" class="tf-button"
                     ><span>Read More</span></a
                   >
                   <div class="img-box">
@@ -538,9 +538,9 @@
                         <div class="content-box">
                           <p>IT Technology Solution</p>
                           <h4>
-                            <a href="porfolio.html">Data Recovery analysis</a>
+                            <a href="{% url 'portfolio-page' %}">Data Recovery analysis</a>
                           </h4>
-                          <a href="porfolio.html" class="btn">
+                          <a href="{% url 'portfolio-page' %}" class="btn">
                             <svg
                               width="28"
                               height="14"
@@ -606,9 +606,9 @@
                         <div class="content-box">
                           <p>IT Technology Solution</p>
                           <h4>
-                            <a href="porfolio.html">Data Recovery analysis</a>
+                            <a href="{% url 'portfolio-page' %}">Data Recovery analysis</a>
                           </h4>
-                          <a href="porfolio.html" class="btn">
+                          <a href="{% url 'portfolio-page' %}" class="btn">
                             <svg
                               width="28"
                               height="14"
@@ -674,9 +674,9 @@
                         <div class="content-box">
                           <p>IT Technology Solution</p>
                           <h4>
-                            <a href="porfolio.html">Data Recovery analysis</a>
+                            <a href="{% url 'portfolio-page' %}">Data Recovery analysis</a>
                           </h4>
-                          <a href="porfolio.html" class="btn">
+                          <a href="{% url 'portfolio-page' %}" class="btn">
                             <svg
                               width="28"
                               height="14"
@@ -742,9 +742,9 @@
                         <div class="content-box">
                           <p>IT Technology Solution</p>
                           <h4>
-                            <a href="porfolio.html">Data Recovery analysis</a>
+                            <a href="{% url 'portfolio-page' %}">Data Recovery analysis</a>
                           </h4>
-                          <a href="porfolio.html" class="btn">
+                          <a href="{% url 'portfolio-page' %}" class="btn">
                             <svg
                               width="28"
                               height="14"
@@ -1169,7 +1169,7 @@
               <div class="col-md-12">
                 <div class="footer-inner">
                   <h3>Solve your IT needs today!</h3>
-                  <a href="service.html" class="tf-button"
+                  <a href="{% url 'service-page' %}" class="tf-button"
                     ><span>Get Solutions</span></a
                   >
                 </div>
@@ -1184,13 +1184,14 @@
             <div class="row">
               <div class="widget widget-logo">
                 <div class="footer__logo">
-                  <a href="index.html">
-                    <img src="{% static 'web/assets/images/logo/logo2.png' %}" alt="" />
+                  <a href="{% url 'home-page' %}">
+                    <img src="{% static 'web/assets/images/71/logo1.png' %}" alt="" />
                   </a>
                 </div>
                 <p class="desc">
-                  Aenean malesuada, sapien vel rhoncus volutpat, odio augue
-                  aliquet orci, in scelerisque nulla sem non justo.
+                  "EKATTOR iT" is a flourishing Software Company in Bangladesh.
+                  We are exclusively focusing in High Quality and Cost-effective
+                  Software Design development and implementation of services.
                 </p>
                 <ul class="social">
                   <li>
@@ -1237,16 +1238,16 @@
                 </ul>
               </div>
               <div class="widget widget-infomation">
-                <h5 class="widget-title">Infomation</h5>
+                <h5 class="widget-title">Information</h5>
                 <ul class="infomation">
-                  <li>90 Stanmer St, London SW11 3DE, UK</li>
+                  <li>Ga 27/2 A, Shahjadpur Gulshan, Dhaka-1212</li>
                   <li class="style">
                     <ul>
-                      <li>Monal@gmail.com</li>
-                      <li>hotline@gmail.com</li>
+                      <li>info@ekattorit.com</li>
+                      <li>support@ekattorit.com</li>
                     </ul>
                   </li>
-                  <li>+1 246-345-069</li>
+                  <li>+88 02-8899608</li>
                 </ul>
               </div>
               <div class="widget widget-subscribe">
