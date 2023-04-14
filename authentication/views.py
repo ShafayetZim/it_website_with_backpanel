@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from authentication import models, forms
 from django.contrib import messages
@@ -6,6 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.views.generic import UpdateView
+from django.contrib.auth.models import User, Permission
 
 
 def login_user(request):
@@ -111,5 +112,29 @@ class UserUpdateView(UpdateView):
         context["title"] = "User Information"
         context["nav_bar"] = "user_list"
         return context
+
+
+def user_permissions(request, user_id):
+    user = get_object_or_404(User, pk=user_id)
+
+    if request.method == 'POST':
+        # Get list of selected permission IDs from form submission
+        selected_permissions = request.POST.getlist('permissions')
+
+        # Update user permissions
+        user.user_permissions.set(selected_permissions)
+        user.save()
+
+        # Redirect to user permissions page
+        return redirect('user_permissions', user_id=user_id)
+
+    user_permissions = user.user_permissions.all()
+    all_permissions = Permission.objects.all()
+    context = {
+        'user': user,
+        'user_permissions': user_permissions,
+        'all_permissions': all_permissions,
+    }
+    return render(request, 'authentication/user_permissions.html', context)
 
 
