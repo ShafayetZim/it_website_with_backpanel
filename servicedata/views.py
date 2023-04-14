@@ -6,6 +6,9 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import user_passes_test
+from django.core.exceptions import PermissionDenied
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 
 class BgServiceList(LoginRequiredMixin, ListView):
@@ -62,7 +65,8 @@ class ExperienceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return context
 
 
-class ServiceList(LoginRequiredMixin, ListView):
+class ServiceList(PermissionRequiredMixin, LoginRequiredMixin, ListView):
+    permission_required = "servicedata.view_service"
     model = Service
     template_name = 'service/service_list.html'
     context_object_name = 'service'
@@ -75,7 +79,7 @@ class ServiceList(LoginRequiredMixin, ListView):
         return context
 
 
-@login_required()
+@user_passes_test(lambda u: u.has_perm('servicedata.add_service'))
 def new_service(request):
     template_name = 'service/service_new.html'
 
@@ -119,7 +123,7 @@ class ServiceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return context
 
 
-@login_required()
+@user_passes_test(lambda u: u.has_perm('auth.view_user'))
 def service_delete(request, id):
     if request.method == 'GET':
         instance = Service.objects.get(id=id)
@@ -144,6 +148,8 @@ class ProgressList(LoginRequiredMixin, ListView):
 
 @login_required()
 def new_progress(request):
+    if not request.user.has_perm('auth.view_user'):
+        raise PermissionDenied()
     template_name = 'service/progress_new.html'
 
     if request.method == 'GET':
@@ -226,7 +232,7 @@ def new_testimonial(request):
             testimonial.save()
 
             messages.add_message(request, messages.SUCCESS, 'New Slider Entry Successful')
-            return redirect('slider-list')
+            return redirect('testimonial-list')
 
         else:
             print("Not Valid Create Form")
