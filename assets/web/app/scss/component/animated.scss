@@ -1,0 +1,119 @@
+@use '../abstracts/' as *;
+/* themesflat animation
+-------------------------------------------------------------- */
+.tf-animated-twocolumn .item-animated.first {
+    transform: translateX(-15px);
+}
+.tf-animated-twocolumn .item-animated.last {
+    transform: translateX(15px);
+}
+.tf-animated-fadeup .content-about,
+.tf-animated-fadeup .effect-img-about,
+.tf-animated-fadeup .title-section,
+.tf-animated-fadeup .breadcrumbs,
+.tf-animated-fadeup.post .image,
+.tf-animated-fadeup.post .content,
+.tf-animated-fadeup#sidebar .widget,
+.tf-animated-fadeup .animated-effect {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+}
+.tf-animated-fadeup .content-about.tfanimated,
+.tf-animated-fadeup .effect-img-about.tfanimated,
+.tf-animated-fadeup .title-section.tfanimated,
+.tf-animated-fadeup#sidebar .widget.tfanimated,
+.tf-animated-fadeup .breadcrumbs.tfanimated,
+.tf-animated-fadeup.post .image.tfanimated,
+.tf-animated-fadeup.post .content.tfanimated,
+.tf-animated-fadeup .animated-effect.tfanimated {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    webkit-transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+/* hover top */
+.tf-animated-hover-top {
+    transition: all 0.5s;
+    transform: translateY(0);
+}
+.tf-animated-hover-top:hover {
+    transform: translateY(-30px);
+}
+.tf-animated-hover-top-s2 {
+    transition: all 0.5s;
+    transform: translateY(0);
+}
+.tf-animated-hover-top-s2:hover {
+    transform: translateY(-10px);
+}
+
+.tf-animated-fadeleft .experience-box,
+.tf-animated-fadeleft .animated-effect {
+    opacity: 0;
+    -webkit-transform: translate3d(-30px,0, 0);
+    transform: translate3d(-30px,0, 0);
+}
+
+.tf-animated-fadeleft .experience-box.tfanimated,
+.tf-animated-fadeleft .animated-effect.tfanimated {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    webkit-transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+.tf-animated-faderight .experience-box,
+.tf-animated-faderight.img-box-service .image,
+.tf-animated-faderight .image-faq .image2,
+.tf-animated-faderight .box-right,
+.tf-animated-faderight .bg-about,
+.tf-animated-faderight .img-style,
+.tf-animated-faderight .animated-effect{
+    opacity: 0;
+    -webkit-transform: translate3d(30px,0, 0);
+    transform: translate3d(30px,0, 0);
+}
+
+.tf-animated-faderight .experience-box.tfanimated,
+.tf-animated-faderight.img-box-service .image.tfanimated,
+.tf-animated-faderight .image-faq .image2.tfanimated,
+.tf-animated-faderight .box-right.tfanimated,
+.tf-animated-faderight .bg-about.tfanimated,
+.tf-animated-faderight .img-style.tfanimated,
+.tf-animated-faderight .animated-effect.tfanimated {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    webkit-transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+.tf-animated-fadedown .animated-effect{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0,-30px, 0);
+}
+
+.tf-animated-fadedown .animated-effect.tfanimated {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    webkit-transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear, -webkit-transform 0.8s ease-in-out;
+}

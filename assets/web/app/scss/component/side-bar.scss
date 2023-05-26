@@ -1,0 +1,469 @@
+@use '../abstracts/' as *;
+
+/* widget
+-------------------------------------------------------------- */
+#sidebar {
+    .widget {
+        background: $white;
+        box-shadow: $box-shadow2;
+        margin-bottom: 40px;
+        padding: 40px 40px 40px;
+        &.widget-category {
+            .widget-title {
+                margin-bottom: 28px;
+            }
+        }
+        &.widget-recent-posts {
+            padding: 40px 40px 33px;
+        }
+        &.widget-tags {
+            ul {
+                margin-right: -10px;
+            }
+        }
+    }
+    .widget-title {
+        margin-bottom: 30px;
+    }
+
+}
+
+.widget {
+    &.widget-search {
+        input[type="text"] {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: $font-main;
+            padding: 13px 15px 13px 30px;
+            &::placeholder {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: $font-main;
+            }
+        }
+        .widget-form {
+            position: relative;
+            button {
+                @include flex(center,center);
+                @include transition3;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 60px;
+                height: 60px;
+                background: $color-hover;
+                border: none;
+                color: $white;
+                i {
+                    font-size: 20px;
+                }
+                &:hover {
+                    background: $color-6;
+                }
+            }
+        }
+    }
+    &.widget-category {
+        ul {
+            li {
+                margin-bottom: 5px;
+                a {
+                    @include transition3;
+                    position: relative;
+                    min-height: 50px;
+                    @include flex(center,flex-start);
+                    background: #F6F6F6;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: $font-main;
+                    font-weight: 500;
+                    color: $color-main1;
+                    padding: 0 20px;
+                    &::before,
+                    &::after {
+                        right: 20px;
+                        font-weight: 500;
+                        position: absolute;
+                        @include topcenter;
+                        font-family: "Font Awesome 5 Pro";
+                        content: "\f324";
+                        color: $color-hover;
+                    }
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                        @include transition3;
+                        -webkit-transform: translate(0, -50%);
+                        -moz-transform: translate(0, -50%);
+                        -ms-transform: translate(0, -50%);
+                        -o-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                    }
+                    &::before {
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transition3;
+                        -webkit-transform: translate(-7px, -50%);
+                        -moz-transform: translate(-7px, -50%);
+                        -ms-transform: translate(-7px, -50%);
+                        -o-transform: translate(-7px, -50%);
+                        transform: translate(-7px, -50%);
+                    }
+                    &:hover {
+                        background: $color-hover;
+                        color: $white;
+                        &::before,
+                        &::after {
+                            color: $white;
+                        }
+                        &::after {
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transition3;
+                            -webkit-transform: translate(7px, -50%);
+                            -moz-transform: translate(7px, -50%);
+                            -ms-transform: translate(7px, -50%);
+                            -o-transform: translate(7px, -50%);
+                            transform: translate(7px, -50%);
+                        }
+                        &::before {
+                            opacity: 1;
+                            visibility: visible;
+                            @include transition3;
+                            -webkit-transform: translate(2px, -50%);
+                            -moz-transform: translate(2px, -50%);
+                            -ms-transform: translate(2px, -50%);
+                            -o-transform: translate(2px, -50%);
+                            transform: translate(2px, -50%);
+                        }
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &.widget-recent-posts {
+        .recent-posts {
+            margin-bottom: 30px;
+            li {
+                @include flex(center,flex-start);
+                .content {
+                    margin-left: 20px;
+                    a {
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 500;
+                        font-family: $font-main;
+                        color: $color-main1;
+                        &:hover {
+                            color: $color-hover;
+                        }
+                    }
+                    .meta-post {
+                        a {
+                            margin-bottom: 0;
+                            font-size: 14px;
+                            line-height: 20px;
+                            color: #76777A;
+                            font-weight: 400;
+                            &:hover {
+                                color: $color-hover;
+                            }
+                        }
+                    }
+                }
+                &:first-child {
+                    margin-bottom: 8px
+                }
+            }
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+    }
+    &.widget-tags {
+        ul {
+            @include flex2;
+            flex-wrap: wrap;
+            li {
+                a {
+                    @include flex(center,center);
+                    height: 34px;
+                    padding: 0 20px;
+                    border-radius: 2px;
+                    background: #F6F6F6;
+                    font-size: 14px;
+                    line-height: 26px;
+                    margin-right: 12px;
+                    margin-bottom: 10px;
+                    font-family: $font-main2;
+                    color: #494A4D;
+                    &:hover {
+                        background: $color-hover;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.social {
+    @include flex2;
+    li {
+        margin-right: 10px;
+        a {
+            border-radius: 50%;
+            @include flex(center,center);
+            height: 40px;
+            width: 40px;
+            background: rgba(255,255,255,0.1);
+            color: $white;
+            font-size: 12px;
+            &:hover {
+                background: $color-hover;
+            }
+        }
+    }
+}
+
+.widget-link {
+    li {
+        a {
+            position: relative;
+            color: $white;
+            font-size: 16px;
+            line-height: 40px;
+            font-weight: bold;
+            font-family: $font-main;
+            text-transform: capitalize;
+            &::before {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                font-size: 15px;
+                font-family: "Font Awesome 5 Pro";
+                content: "\f324";
+                color: #00B0FC;
+                opacity: 0;
+                visibility: hidden;
+                @include transition3;
+                transform: translateX(-12px);
+                font-weight: 400;
+            }
+            &:hover {
+                padding-left: 20px;
+                color: $color-hover;
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                    @include transition3;
+                    transform: translateY(0);
+
+                }
+            }
+
+        }
+    }
+}
+
+.wrap-widget {
+    margin-top: 51px;
+    margin-bottom: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #E8E8E9;
+    @include flex(center,space-between);
+    .widget {
+        &.widget-tag {
+            @include flex(center,flex-start);
+            ul {
+                @include flex(center,flex-start);
+                li {
+                    margin-right: 9px;
+                    font-size: 17px;
+                    line-height: 1.64;
+                    span {
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: $color-st2;
+                        font-weight: 400;  
+                    }
+                    a {
+                        height: 34px;
+                        padding: 0 21px;
+                        @include flex(center,center);
+                        background: $color-4;
+                        color: $txt-color;
+                        font-family: $font-main2;
+                        font-size: 14px;
+                        line-height: 26px;
+                        &.active,
+                        &:hover {
+                            background: $color-hover;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            }
+        .title-widget {
+            margin-right: 30px;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+        &.widget-social {
+            padding-right: 2px;
+            .title-widget {
+                margin-right: 40px;
+            }
+            @include flex(center,center);
+            h4 {
+                margin-right: -8px
+            }
+            ul {
+               @include flex2;
+               margin-top: 2px;
+               li {
+                    margin-left: 25px;
+                    margin-right: 0;
+                    font-size: 17px;
+                    line-height: 1.64;
+                    a {
+                        color: $color-main1;
+                        &:hover {
+                            color: $color-hover;
+                        }
+                        i {
+                            font-size: 17px;
+                        }
+                    } 
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wrap-box-details {
+    margin-bottom: 48px;
+    @include flex(flex-start,space-between);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    .previous,
+    .next {
+        width: 50%;
+        a  {
+            &.st {
+                font-size: 14px;
+                line-height: 1.57;
+                font-weight:$font-w7;
+                font-family: $font-main;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+                color: $color-main2;
+            }
+            &:hover {
+                color: $color-hover;
+            }
+        }
+        h6 {
+            font-size: 20px;
+            line-height: 1.3;
+            color: $white;
+        }
+    }
+    .previous {
+        @include flex(center,flex-start);
+        padding-right: 70px;
+        position: relative;
+        .img {
+            margin-right: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 80px;
+            min-height: 80px;
+            img {
+                min-width: 80px;
+                min-height: 80px;
+            }
+        }
+        .desc{
+            .job {
+                font-size: 18px;
+                line-height: 28px;
+                font-family: $font-main;
+                font-weight: bold;
+                color: $color-main1;
+                margin-bottom: 4px;
+            }
+            a {
+                @include font-14;
+                color: $color-hover;
+                padding-left: 26px;
+                position: relative;
+                font-family: $font-main3;
+                font-weight: bold;
+                &::before {
+                    position: absolute;
+                    content    : "\f177";
+                    font-family: "Font Awesome 5 Pro";
+                    left: 0;
+                    top: 0px;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                &:hover {
+                    color: $color-6;
+                }
+            }
+        }
+    }
+    .next {
+        @include flex(center,flex-start);
+        text-align: right;
+        padding-right: 0;
+        justify-content: flex-end;
+        .img {
+            margin-left: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 80px;
+            min-height: 80px;
+        }
+        .desc{
+            .job {
+                font-size: 18px;
+                line-height: 28px;
+                font-family: $font-main;
+                font-weight: bold;
+                color: $color-main1;
+                margin-bottom: 8px;
+            }
+            a {
+                @include font-14;
+                color: $color-hover;
+                padding-right: 26px;
+                position: relative;
+                font-family: $font-main3;
+                font-weight: bold;
+                &::before {
+                    position: absolute;
+                    content    : "\f178";
+                    font-family: "Font Awesome 5 Pro";
+                    right: 0;
+                    top: 0;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                &:hover {
+                    color: $color-6;
+                }
+            }
+        }
+    }
+}
